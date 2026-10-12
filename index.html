@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Портфолио фронтенд-разработчика: пять сайтов на чистом HTML, CSS и JavaScript. Вёрстка, анимации, интерактив — без фреймворков и сборщиков.">
+  <meta name="theme-color" content="#0e0e0e">
+  <title>Портфолио — вёрстка и фронтенд на чистом HTML, CSS, JS</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header" id="header">
+    <a class="brand" href="index.html">
+      <span class="brand__mark" aria-hidden="true">НК</span>
+      <span class="brand__text">Портфолио</span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Основная навигация">
+      <a class="nav__link" href="#work">Проекты</a>
+      <a class="nav__link" href="#approach">Подход</a>
+      <a class="nav__link" href="#stack">Стек</a>
+      <a class="nav__link" href="#contact">Контакты</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="nav">
+      <span class="nav-toggle__line"></span>
+      <span class="nav-toggle__line"></span>
+      <span class="nav-toggle__label">Меню</span>
+    </button>
+  </header>
+
+  <main id="top">
+
+    <section class="hero">
+      <p class="hero__eyebrow">Портфолио · Фронтенд и вёрстка · 2026</p>
+      <h1 class="hero__title">Сайты без шаблонов, собранные <em>вручную</em>.</h1>
+      <p class="hero__lede">Пять проектов на чистом HTML, CSS и JavaScript — без фреймворков, сборщиков и зависимостей. Каждый открывается двойным кликом по <code>index.html</code> и готов к публикации на GitHub Pages.</p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#work">Смотреть проекты</a>
+        <a class="btn btn--ghost" href="#contact">Написать мне</a>
+      </div>
+      <dl class="hero__facts">
+        <div class="hero__fact">
+          <dt>Проектов</dt>
+          <dd>5</dd>
+        </div>
+        <div class="hero__fact">
+          <dt>Страниц</dt>
+          <dd>13</dd>
+        </div>
+        <div class="hero__fact">
+          <dt>Зависимостей</dt>
+          <dd>0</dd>
+        </div>
+        <div class="hero__fact">
+          <dt>Формат</dt>
+          <dd>Vanilla</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="section" id="work">
+      <div class="section__head reveal">
+        <p class="section__label">01 — Проекты</p>
+        <h2 class="section__title">Пять сайтов,<br>пять <em>характеров</em></h2>
+      </div>
+
+      <div class="projects">
+        <article class="project reveal">
+          <a class="project__link" href="travel/index.html">
+            <figure class="project__thumb">
+              <img src="assets/img/preview-travel.jpg" alt="Скриншот проекта «Компас»" width="1440" height="900" loading="lazy">
+            </figure>
+            <div class="project__body">
+              <span class="project__num">01</span>
+              <div class="project__info">
+                <span class="project__cat">Путешествия</span>
+                <h3 class="project__name">Компас</h3>
+                <p class="project__desc">Туристическое агентство: параллакс-горы, интерактивная карта мира с пинами и слайдер отзывов.</p>
+                <ul class="project__tags">
+                  <li>Параллакс</li>
+                  <li>SVG-карта</li>
+                  <li>Слайдер</li>
+                </ul>
+              </div>
+              <span class="project__arrow" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
+              </span>
+            </div>
+          </a>
+        </article>
+
+        <article class="project reveal">
+          <a class="project__link" href="food/index.html">
+            <figure class="project__thumb">
+              <img src="assets/img/preview-food.jpg" alt="Скриншот проекта «Вкус»" width="1440" height="900" loading="lazy">
+            </figure>
+            <div class="project__body">
+              <span class="project__num">02</span>
+              <div class="project__info">
+                <span class="project__cat">Еда</span>
+                <h3 class="project__name">Вкус</h3>
+                <p class="project__desc">Сервис здорового питания: конструктор блюд с живым пересчётом КБЖУ, графики на canvas и запись на дегустацию.</p>
+                <ul class="project__tags">
+                  <li>Конструктор</li>
+                  <li>Canvas</li>
+                  <li>Формы</li>
+                </ul>
+              </div>
+              <span class="project__arrow" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
+              </span>
+            </div>
+          </a>
+        </article>
+
+        <article class="project reveal">
+          <a class="project__link" href="fitness/index.html">
+            <figure class="project__thumb">
+              <img src="assets/img/preview-fitness.jpg" alt="Скриншот проекта «Импульс»" width="1440" height="900" loading="lazy">
+            </figure>
+            <div class="project__body">
+              <span class="project__num">03</span>
+              <div class="project__info">
+                <span class="project__cat">Фитнес</span>
+                <h3 class="project__name">Импульс</h3>
+                <p class="project__desc">Фитнес-студия: кольца прогресса, график активности за неделю и калькуляторы ИМТ и нормы калорий.</p>
+                <ul class="project__tags">
+                  <li>SVG-анимация</li>
+                  <li>Калькулятор</li>
+                  <li>Табло</li>
+                </ul>
+              </div>
+              <span class="project__arrow" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
+              </span>
+            </div>
+          </a>
+        </article>
+
+        <article class="project reveal">
+          <a class="project__link" href="fashion/index.html">
+            <figure class="project__thumb">
+              <img src="assets/img/preview-fashion.jpg" alt="Скриншот проекта «Ателье»" width="1440" height="900" loading="lazy">
+            </figure>
+            <div class="project__body">
+              <span class="project__num">04</span>
+              <div class="project__info">
+                <span class="project__cat">Мода</span>
+                <h3 class="project__name">Ателье</h3>
+                <p class="project__desc">Модный дом из четырёх страниц: lookbook с фильтрами, лайтбокс, таймлайн бренда и формы.</p>
+                <ul class="project__tags">
+                  <li>Мультистраница</li>
+                  <li>Лайтбокс</li>
+                  <li>Editorial</li>
+                </ul>
+              </div>
+              <span class="project__arrow" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
+              </span>
+            </div>
+          </a>
+        </article>
+
+        <article class="project reveal">
+          <a class="project__link" href="auto/index.html">
+            <figure class="project__thumb">
+              <img src="assets/img/preview-auto.jpg" alt="Скриншот проекта «Мотор»" width="1440" height="900" loading="lazy">
+            </figure>
+            <div class="project__body">
+              <span class="project__num">05</span>
+              <div class="project__info">
+                <span class="project__cat">Авто</span>
+                <h3 class="project__name">Мотор</h3>
+                <p class="project__desc">Автодилер электрокаров: конфигуратор с живой ценой и графиками, сравнение моделей, сеть шоурумов.</p>
+                <ul class="project__tags">
+                  <li>Конфигуратор</li>
+                  <li>Графики</li>
+                  <li>HUD</li>
+                </ul>
+              </div>
+              <span class="project__arrow" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
+              </span>
+            </div>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="approach">
+      <div class="section__head reveal">
+        <p class="section__label">02 — Подход</p>
+        <h2 class="section__title">Как я это <em>делаю</em></h2>
+      </div>
+      <div class="cols">
+        <article class="col reveal">
+          <h3 class="col__num">01</h3>
+          <h4 class="col__title">Нативно</h4>
+          <p>Чистый HTML, CSS и JavaScript. Никаких сборщиков, зависимостей и лишнего рантайма — сайт открывается из файла и спокойно живёт на GitHub Pages.</p>
+        </article>
+        <article class="col reveal">
+          <h3 class="col__num">02</h3>
+          <h4 class="col__title">Внимание к деталям</h4>
+          <p>У каждого проекта собственный визуальный язык: от полевого журнала до инженерного чертежа. Типографика, текстуры и анимации нарисованы вручную, а не взяты из шаблона.</p>
+        </article>
+        <article class="col reveal">
+          <h3 class="col__num">03</h3>
+          <h4 class="col__title">Работает везде</h4>
+          <p>Валидная вёрстка, адаптивность, поддержка <code>prefers-reduced-motion</code>, локальные изображения и кириллические шрифты без потери скорости.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="stack">
+      <div class="section__head reveal">
+        <p class="section__label">03 — Стек</p>
+        <h2 class="section__title">Инструменты,<br>которых <em>достаточно</em></h2>
+      </div>
+      <ul class="stack">
+        <li class="reveal">HTML5</li>
+        <li class="reveal">CSS3</li>
+        <li class="reveal">JavaScript&nbsp;ES2022</li>
+        <li class="reveal">SVG</li>
+        <li class="reveal">Canvas</li>
+        <li class="reveal">Google&nbsp;Fonts</li>
+        <li class="reveal">Git</li>
+        <li class="reveal">GitHub&nbsp;Pages</li>
+        <li class="reveal">Без&nbsp;фреймворков</li>
+      </ul>
+    </section>
+
+    <section class="section section--contact" id="contact">
+      <div class="section__head reveal">
+        <p class="section__label">04 — Контакты</p>
+        <h2 class="section__title">Обсудим<br>ваш <em>проект?</em></h2>
+      </div>
+      <p class="contact__text reveal">Пишите — отвечу в течение дня. Соберу под вашу задачу отдельный макет, аккуратно сверстаю и подготовлю к публикации.</p>
+      <div class="contact__actions reveal">
+        <button class="btn btn--primary" id="copyEmail" type="button">Скопировать почту</button>
+        <span class="contact__mail" id="emailAddr" aria-hidden="true">hello@example.com</span>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Собрано вручную на чистом HTML, CSS и JavaScript</p>
+    <p>© <span id="year">2026</span>· Портфолио фронтенд-разработчика</p>
+    <a class="to-top" href="#top">Наверх ↑</a>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

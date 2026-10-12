@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>МОТОР — электромобили и премиум-авто | Главная</title>
+  <meta name="description" content="МОТОР — премиальный автомобильный бренд: электромобили, гибриды и мощные ДВС. Соберите свой автомобиль в онлайн-конфигураторе с живой ценой и графиками характеристик.">
+  <meta name="keywords" content="электромобили, конфигуратор, премиум авто, МОТОР, электрокар, гибрид">
+  <meta name="theme-color" content="#0a1626">
+  <link rel="canonical" href="https://motor.example.com/index.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="МОТОР">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:title" content="МОТОР — электромобили и премиум-авто будущего">
+  <meta property="og:description" content="Соберите свой автомобиль в онлайн-конфигураторе: живая цена, характеристики и графики за секунды.">
+  <meta property="og:image" content="https://motor.example.com/assets/img/hero.webp">
+  <meta property="og:url" content="https://motor.example.com/index.html">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20fill='%230a1626'/%3E%3Cpath%20d='M14%2046V20h8l10%2016%2010-16h8v26h-8V34l-10%2016-10-16v12z'%20fill='%2335c4e8'/%3E%3C/svg%3E">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">К содержанию</a>
+
+  <!-- ШАПКА -->
+  <header class="site-header">
+    <nav class="nav container" aria-label="Основная навигация">
+      <a class="brand" href="index.html" aria-label="МОТОР — на главную">
+        <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true">
+          <rect width="64" height="64" rx="6" fill="#0e2033"/>
+          <path d="M14 46V20h8l10 16 10-16h8v26h-8V34l-10 16-10-16v12z" fill="#35c4e8"/>
+        </svg>
+        <span class="brand__name">МОТОР<span class="dot">.</span></span>
+      </a>
+      <div class="nav__links" id="navLinks">
+        <a href="index.html" aria-current="page">Главная</a>
+        <a href="models.html">Модельный ряд</a>
+        <a href="configurator.html">Конфигуратор</a>
+        <a href="about.html">О компании</a>
+      </div>
+      <div class="nav__cta">
+        <a class="nav__phone" href="tel:+78002000400">8 800 200-04-00</a>
+        <a class="btn" href="configurator.html">Собрать авто</a>
+        <button class="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="container hero__grid">
+        <div class="hero__content" data-reveal="">
+          <span class="eyebrow">Премиум-электро новый сезон 2026</span>
+          <h1 class="hero__title" id="heroTitle">Тишина в городе,<br><em>мощь на трассе</em></h1>
+          <p class="hero__text lead">
+            МОТОР — российский бренд, который строит автомобили будущего:
+            электромобили с запасом хода до 620 км, интуитивным автопилотом
+            и дизайном, смотрящим вперёд. Соберите свою версию за минуту.
+          </p>
+          <div class="btn-row">
+            <a class="btn btn--lg" href="models.html">Смотреть модели</a>
+            <a class="btn btn--ghost btn--lg" href="#testdrive">Тест-драйв</a>
+          </div>
+          <div class="hero__meta">
+            <div><b class="mono-num">920</b><small>пиковая мощь, л.с.</small></div>
+            <div><b class="mono-num">2,6</b><small>сек · 0–100 км/ч</small></div>
+            <div><b class="mono-num">620</b><small>км · запас хода</small></div>
+          </div>
+        </div>
+        <div class="hero__visual" data-reveal="scale">
+          <img class="hero__img" src="assets/img/hero.webp" alt="Электромобиль МОТОР на дороге в вечернем свете" decoding="async">
+          <div class="hero__glow" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- НОВИНКИ -->
+    <section class="section section--tight" aria-labelledby="newsTitle">
+      <div class="container">
+        <div class="section-head" data-reveal="">
+          <span class="eyebrow">Свежие серии</span>
+          <h2 id="newsTitle">Новинки <span class="accent">сезона</span></h2>
+          <p class="lead">Три модели, которые уже задают тон на дорогах мегаполисов и трассах выходного дня.</p>
+        </div>
+        <div class="grid grid--3">
+          <article class="card" data-reveal data-delay="1">
+            <div class="card__media">
+              <span class="card__tag card__tag--red">Топ</span>
+              <img class="card__img" src="assets/img/models/volta-gt.webp" alt="Спорткар МОТОР Volta GT" loading="lazy" decoding="async">
+            </div>
+            <div class="card__body">
+              <div class="card__title"><span class="visually-hidden">Новинка:</span><h3>Volta GT</h3><span class="card__price">от 7 850 000 ₽</span></div>
+              <p class="card__desc">Спорткар с тремя электромоторами: 920 л.с., полный привод и разгон до сотни за 2,6 секунды.</p>
+              <div class="spec-list">
+                <div><span class="spec-ico">⚡</span><b>920</b> л.с.</div>
+                <div><span class="spec-ico">⏱</span><b>2,6</b> с · 0–100</div>
+                <div><span class="spec-ico">🔋</span><b>540</b> км</div>
+              </div>
+              <div class="card__actions"><a class="btn" href="configurator.html?model=volta-gt">Настроить</a><a class="btn btn--ghost" href="index.html#testdrive">Тест-драйв</a></div>
+            </div>
+          </article>
+
+          <article class="card" data-reveal data-delay="2">
+            <div class="card__media">
+              <span class="card__tag">Новинка</span>
+              <img class="card__img" src="assets/img/models/aero-s.webp" alt="Электроседан МОТОР Aero S" loading="lazy" decoding="async">
+            </div>
+            <div class="card__body">
+              <div class="card__title"><span class="visually-hidden">Новинка:</span><h3>Aero S</h3><span class="card__price">от 4 290 000 ₽</span></div>
+              <p class="card__desc">Флагманский электроседан с рекордной аэродинамикой 0,21 Cd и тишиной в салоне в 18 дБ.</p>
+              <div class="spec-list">
+                <div><span class="spec-ico">⚡</span><b>544</b> л.с.</div>
+                <div><span class="spec-ico">⏱</span><b>3,9</b> с · 0–100</div>
+                <div><span class="spec-ico">🔋</span><b>620</b> км</div>
+              </div>
+              <div class="card__actions"><a class="btn" href="configurator.html?model=aero-s">Настроить</a><a class="btn btn--ghost" href="index.html#testdrive">Тест-драйв</a></div>
+            </div>
+          </article>
+
+          <article class="card" data-reveal data-delay="3">
+            <div class="card__media">
+              <span class="card__tag">Универсал</span>
+              <img class="card__img" src="assets/img/models/terra-x.webp" alt="Электрокроссовер МОТОР Terra X" loading="lazy" decoding="async">
+            </div>
+            <div class="card__body">
+              <div class="card__title"><span class="visually-hidden">Новинка:</span><h3>Terra X</h3><span class="card__price">от 5 150 000 ₽</span></div>
+              <p class="card__desc">Полноприводный электрический кроссовер с пневмоподвеской и режимом Off-road для любых дорог.</p>
+              <div class="spec-list">
+                <div><span class="spec-ico">⚡</span><b>612</b> л.с.</div>
+                <div><span class="spec-ico">⏱</span><b>4,4</b> с · 0–100</div>
+                <div><span class="spec-ico">🔋</span><b>560</b> км</div>
+              </div>
+              <div class="card__actions"><a class="btn" href="configurator.html?model=terra-x">Настроить</a><a class="btn btn--ghost" href="index.html#testdrive">Тест-драйв</a></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- СТАТИСТИКА -->
+    <section class="section stats" aria-label="Цифры компании">
+      <div class="container stats__grid">
+        <div class="stat" data-reveal=""><b class="stat__num" data-count="6">0</b><span class="stat__label">Моделей в линейке</span></div>
+        <div class="stat" data-reveal data-delay="1"><b class="stat__num" data-count="12">0</b><span class="stat__label">Дилерских центров</span></div>
+        <div class="stat" data-reveal data-delay="2"><b class="stat__num" data-count="48">0<span class="suffix">000+</span></b><span class="stat__label">Довольных клиентов</span></div>
+        <div class="stat" data-reveal data-delay="3"><b class="stat__num" data-count="320">0</b><span class="stat__label">Зарядных станций</span></div>
+      </div>
+    </section>
+
+    <!-- ПРЕИМУЩЕСТВА -->
+    <section class="section" aria-labelledby="whyTitle">
+      <div class="container">
+        <div class="section-head center" data-reveal="">
+          <span class="eyebrow">Почему МОТОР</span>
+          <h2 id="whyTitle">Технологии, которые <span class="accent">ощущаются</span></h2>
+        </div>
+        <div class="grid grid--3">
+          <article class="feature" data-reveal data-delay="1">
+            <div class="feature__ico" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <h3>Чистая электротяга</h3>
+            <p>Никаких выхлопов и шума: мгновенный крутящий момент, рекуперация энергии до 30% и запас хода до 620 км на одной зарядке.</p>
+          </article>
+          <article class="feature" data-reveal data-delay="2">
+            <div class="feature__ico" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+            </div>
+            <h3>Безопасность 5 звёзд</h3>
+            <p>Алюминиевый композитный каркас, 12 подушек безопасности и предиктивная система антизаноса работают ещё до того, как вы что-то почувствуете.</p>
+          </article>
+          <article class="feature" data-reveal data-delay="3">
+            <div class="feature__ico" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg>
+            </div>
+            <h3>Автопилот «Пилот 3»</h3>
+            <p>Система третьего уровня автономности: лидар, 12 камер и нейронный модуль, который берёт управление пробкой, парковкой и трассой на себя.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ГАЛЕРЕЯ -->
+    <section class="section section--tight" aria-labelledby="galleryTitle">
+      <div class="container">
+        <div class="section-head" data-reveal="">
+          <span class="eyebrow">Галерея</span>
+          <h2 id="galleryTitle">Взгляд на <span class="accent">детали</span></h2>
+          <p class="lead">Нажмите на кадр, чтобы рассмотреть автомобили МОТОР вживую — каждый ракурс от дизайн-студии в Москве.</p>
+        </div>
+        <div class="gallery" data-reveal="">
+          <figure class="gallery__item">
+            <a href="assets/img/hero.webp" target="_blank" rel="noopener" aria-label="Открыть фото модели Volta GT">
+              <img src="assets/img/hero.webp" alt="Электросуперкар МОТОР Volta GT на закате" loading="lazy">
+            </a>
+            <figcaption>Volta GT — ночная трасса</figcaption>
+          </figure>
+          <figure class="gallery__item">
+            <a href="assets/img/g2.webp" target="_blank" rel="noopener" aria-label="Открыть фото салона Aero S">
+              <img src="assets/img/g2.webp" alt="Салон Aero S с кожаными сиденьями Nappa и панорамой" loading="lazy">
+            </a>
+            <figcaption>Салон Aero S</figcaption>
+          </figure>
+          <figure class="gallery__item">
+            <a href="assets/img/g3.webp" target="_blank" rel="noopener" aria-label="Открыть фото зарядной станции МОТОР">
+              <img src="assets/img/g3.webp" alt="Быстрая зарядная станция МОТОР Power 480" loading="lazy">
+            </a>
+            <figcaption>Зарядка Power 480</figcaption>
+          </figure>
+          <figure class="gallery__item">
+            <a href="assets/img/g4.webp" target="_blank" rel="noopener" aria-label="Открыть фото кроссовера Terra X в горах">
+              <img src="assets/img/g4.webp" alt="Электрокроссовер Terra X на горном серпантине" loading="lazy">
+            </a>
+            <figcaption>Terra X в горах</figcaption>
+          </figure>
+          <figure class="gallery__item">
+            <a href="assets/img/g5.webp" target="_blank" rel="noopener" aria-label="Открыть фото интерьера с проекционным дисплеем">
+              <img src="assets/img/g5.webp" alt="Проекционный дисплей на лобовом стекле автомобиля МОТОР" loading="lazy">
+            </a>
+            <figcaption>HUD-дисплей</figcaption>
+          </figure>
+          <figure class="gallery__item">
+            <a href="assets/img/g6.webp" target="_blank" rel="noopener" aria-label="Открыть фото электромобиля на фоне города">
+              <img src="assets/img/g6.webp" alt="Nova EV на фоне вечернего мегаполиса" loading="lazy">
+            </a>
+            <figcaption>Nova EV в городе</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA ТЕСТ-ДРАЙВ -->
+    <section class="section" id="testdrive" aria-labelledby="testTitle">
+      <div class="container">
+        <div class="cta-band" data-reveal="">
+          <div>
+            <span class="eyebrow">Живые ощущения</span>
+            <h2 id="testTitle">Запишитесь на <span class="accent">тест-драйв</span></h2>
+            <p class="lead">Приезжайте в ближайший центр МОТОР: 30 минут за рулём, зона быстрой зарядки и бесплатный кофе в lounge. Менеджер перезвонит через 15 минут после заявки.</p>
+          </div>
+          <form class="form-card" data-form novalidate>
+            <h3 class="visually-hidden">Форма записи на тест-драйв</h3>
+            <div class="field">
+              <label for="td-name">Ваше имя</label>
+              <input id="td-name" name="name" type="text" placeholder="Иван" required>
+            </div>
+            <div class="field">
+              <label for="td-phone">Телефон</label>
+              <input id="td-phone" name="phone" type="tel" placeholder="+7 (___) ___-__-__" required>
+            </div>
+            <div class="field">
+              <label for="td-model">Интересующая модель</label>
+              <select id="td-model" name="model">
+                <option>МОТОР Aero S</option>
+                <option>МОТОР Terra X</option>
+                <option>МОТОР Volta GT</option>
+                <option>МОТОР Hybrid One</option>
+                <option>МОТОР Ranger V6</option>
+                <option>МОТОР Nova EV</option>
+              </select>
+            </div>
+            <button class="btn btn--red btn--block btn--lg" type="submit">Записаться</button>
+            <div class="form-success" role="status">Заявка принята! Перезвоним в течение 15 минут.</div>
+            <p class="form-note">Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ФУТЕР -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a class="brand" href="index.html">
+            <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true">
+              <rect width="64" height="64" rx="6" fill="#0e2033"/>
+              <path d="M14 46V20h8l10 16 10-16h8v26h-8V34l-10 16-10-16v12z" fill="#35c4e8"/>
+            </svg>
+            <span class="brand__name">МОТОР<span class="dot">.</span></span>
+          </a>
+          <p>Российский бренд премиальных электромобилей. Инженерия, дизайн и производство — в Москве с 2014 года.</p>
+        </div>
+        <div>
+          <h3>Навигация</h3>
+          <ul class="footer__links">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="models.html">Модельный ряд</a></li>
+            <li><a href="configurator.html">Конфигуратор</a></li>
+            <li><a href="about.html">О компании</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Клиентам</h3>
+          <ul class="footer__links">
+            <li><a href="about.html#dealers">Дилеры и сервис</a></li>
+            <li><a href="about.html#guarantee">Гарантия</a></li>
+            <li><a href="index.html#testdrive">Тест-драйв</a></li>
+            <li><a href="about.html#timeline">История бренда</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Контакты</h3>
+          <ul class="footer__links">
+            <li><a href="tel:+78002000400">8 800 200-04-00 (бесплатно)</a></li>
+            <li><a href="mailto:hello@motor.auto">hello@motor.auto</a></li>
+            <li><a href="about.html#dealers">Москва, Ленинградский пр-т, 39</a></li>
+          </ul>
+          <div class="socials">
+            <a href="https://vk.com" target="_blank" rel="noopener" aria-label="МОТОР ВКонтакте">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 17s.3-.03.5-.3c.2-.4.6-1.6 1-2.7.2-.8.5.5 1 1 .6.7 1.4.9 1.4.9h2s1.7-.2.9-1.7c-.2-.3-1.2-2.5-5-5.3-2-1.5-3-1.6-3.4-1.4-.6.3-.8 1.3-.3 2-.5-.3-1-1-2.4-2.6-.7-.8-1.2-1-1.5-1-.5-.1-1-.4-1-.6-.3-1-.7-3.2-.7-3.3s-.1-.4-.5-.4H4.5c-.4 0-.6.6-.5 1 .6 3 4.7 10 6.8 10 1-.3.6-.4 1 .8z"/></svg>
+            </a>
+            <a href="https://t.me" target="_blank" rel="noopener" aria-label="МОТОР в Telegram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 4 3 11l6 2 2 7 3-5 5 3 2-14z"/></svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="МОТОР на YouTube">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23 8s-.2-1.6-.9-2.3c-.8-.9-1.7-.9-2.1-1C16.8 4.4 12 4.4 12 4.4s-4.8 0-8 .3c-.4.1-1.3.1-2.1 1C1.2 6.4 1 8 1 8S.8 9.8.8 11.6v1.7c0 1.8.2 3.6.2 3.6s.2 1.6.9 2.3c.8.9 1.9.9 2.4 1 1.7.2 7 .3 7 .3s4.8 0 8-.3c.4-.1 1.3-.1 2.1-1 .7-.7.9-2.3.9-2.3s.2-1.8.2-3.6v-1.7C23.2 9.8 23 8 23 8zM9.7 14.8V8.4l5.6 3.2-5.6 3.2z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2014–2026 МОТОР. Все права защищены.</span>
+        <span><a href="#">Политика конфиденциальности</a> · <a href="#">Условия покупки</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

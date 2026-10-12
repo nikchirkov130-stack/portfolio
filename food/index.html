@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>«Вкус» — авторская кухня, рецепты и КБЖУ | Гастрономия без компромиссов</title>
+  <meta name="description" content="«Вкус» — гастрономический проект с авторскими рецептами. Интерактивные диаграммы КБЖУ, конструктор блюда, бронирование столика и подписка на новые рецепты.">
+  <meta name="keywords" content="ресторан, рецепты, КБЖУ, калории, авторская кухня, бронирование столика, гастрономия">
+  <meta name="author" content="Гастрономический проект «Вкус»">
+  <meta name="theme-color" content="#fdf9f2">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="«Вкус» — гастрономия без компромиссов">
+  <meta property="og:description" content="Авторские рецепты, интерактивные диаграммы КБЖУ и конструктор блюда в реальном времени.">
+  <meta property="og:image" content="assets/img/hero.jpg">
+  <meta property="og:locale" content="ru_RU">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="«Вкус» — гастрономия без компромиссов">
+  <meta name="twitter:description" content="Авторские рецепты, интерактивные диаграммы КБЖУ и конструктор блюда.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="header">
+    <div class="container header__inner">
+      <a href="#hero" class="logo" aria-label="«Вкус» — на главную">
+        <span class="logo__mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" width="40" height="40">
+            <circle cx="20" cy="20" r="12" fill="none" stroke="currentColor" stroke-width="2.5"/>
+            <path d="M20 8v24M8 20h24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" opacity=".65"/>
+          </svg>
+        </span>
+        <span class="logo__text">Вкус<em>.</em></span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Основная навигация">
+        <ul class="nav__list">
+          <li><a href="#menu" class="nav__link">Меню</a></li>
+          <li><a href="#nutrition" class="nav__link">Питательность</a></li>
+          <li><a href="#builder" class="nav__link">Конструктор</a></li>
+          <li><a href="#chefs" class="nav__link">Шефы</a></li>
+          <li><a href="#reviews" class="nav__link">Отзывы</a></li>
+          <li><a href="#booking" class="nav__link">Бронь</a></li>
+        </ul>
+        <a href="#booking" class="btn btn--primary nav__cta">Забронировать</a>
+      </nav>
+
+      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+      <canvas class="hero__particles" id="heroParticles" aria-hidden="true"></canvas>
+      <div class="container hero__inner">
+        <div class="hero__content reveal">
+          <p class="hero__eyebrow">Авторская кухня &amp; рецепты · с 2014 года</p>
+          <h1 class="hero__title">Гастрономия<br><span class="text-terracotta">без компромиссов</span></h1>
+          <p class="hero__text">
+            Мы соединяем сезонные продукты, точную науку о питании и кулинарную интуицию.
+            Каждое блюдо — с открытым КБЖУ, честными порциями и понятным вкусом.
+          </p>
+          <div class="hero__actions">
+            <a href="#menu" class="btn btn--primary">Смотреть меню</a>
+            <a href="#builder" class="btn btn--ghost">Собрать блюдо</a>
+          </div>
+          <ul class="hero__stats">
+            <li><strong data-counter="128">0</strong><span>авторских рецептов</span></li>
+            <li><strong data-counter="12">0</strong><span>лет на кухне</span></li>
+            <li><strong data-counter="46">0</strong><span>сезонных продуктов</span></li>
+          </ul>
+        </div>
+
+        <div class="hero__visual reveal" aria-hidden="true">
+          <div class="plate-wrap" data-parallax="0.06">
+            <img class="hero__photo" src="assets/img/hero.jpg" alt="" width="1200" height="1200" loading="eager" fetchpriority="high" decoding="async">
+            <span class="plate-caption">сезонное меню · шеф Арсен</span>
+          </div>
+        </div>
+      </div>
+      <a href="#menu" class="hero__scroll" aria-label="Прокрутить вниз"><span></span></a>
+    </section>
+
+    <!-- ============ МЕНЮ ============ -->
+    <section class="section section--menu" id="menu">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="section__eyebrow">Меню &amp; рецепты</p>
+          <h2 class="section__title">Что сегодня на <span class="text-saffron">нашей кухне</span></h2>
+          <p class="section__lead">Выберите категорию и нажмите на блюдо, чтобы увидеть его КБЖУ на диаграмме ниже.</p>
+        </header>
+
+        <div class="tabs reveal" role="tablist" aria-label="Категории меню">
+          <button class="tab is-active" id="tab-breakfast" role="tab" aria-selected="true" aria-controls="dishes" tabindex="0" data-cat="breakfast">Завтраки</button>
+          <button class="tab" id="tab-main" role="tab" aria-selected="false" aria-controls="dishes" tabindex="-1" data-cat="main">Основные</button>
+          <button class="tab" id="tab-soup" role="tab" aria-selected="false" aria-controls="dishes" tabindex="-1" data-cat="soup">Супы</button>
+          <button class="tab" id="tab-dessert" role="tab" aria-selected="false" aria-controls="dishes" tabindex="-1" data-cat="dessert">Десерты</button>
+          <button class="tab" id="tab-drink" role="tab" aria-selected="false" aria-controls="dishes" tabindex="-1" data-cat="drink">Напитки</button>
+        </div>
+
+        <div class="grid dishes" id="dishes" role="tabpanel" aria-labelledby="tab-breakfast" tabindex="0" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- ============ ВИЗУАЛИЗАЦИЯ ПИТАТЕЛЬНОСТИ ============ -->
+    <section class="section section--nutrition" id="nutrition">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="section__eyebrow">Ключевая фишка</p>
+          <h2 class="section__title">Питательность <span class="text-olive">до последнего грамма</span></h2>
+          <p class="section__lead">Живая диаграмма распределения белков, жиров и углеводов. Кликайте блюда в меню — график перестроится сам.</p>
+        </header>
+
+        <div class="nutrition reveal">
+          <div class="nutrition__chart">
+            <canvas id="donut" width="520" height="520" role="img" aria-label="Диаграмма распределения белков, жиров и углеводов"></canvas>
+            <div class="nutrition__center" aria-hidden="true">
+              <span class="nutrition__kcal" id="donutKcal">0</span>
+              <span class="nutrition__kcal-label">ккал на порцию</span>
+            </div>
+          </div>
+          <div class="nutrition__panel">
+            <h3 class="nutrition__dish" id="donutDishName">Выберите блюдо</h3>
+            <p class="nutrition__desc" id="donutDishDesc">Нажмите на любую карточку в разделе «Меню», чтобы увидеть детальную питательную ценность.</p>
+            <p class="nutrition__label-cap">Пищевая ценность на порцию</p>
+            <ul class="legend" id="donutLegend">
+              <li class="legend__item" data-key="protein">
+                <span class="legend__dot" style="--c:var(--protein)"></span>
+                <span class="legend__name">Белки</span>
+                <span class="legend__val"><b id="valProtein">0</b> г</span>
+                <span class="legend__bar"><i style="--c:var(--protein)"></i></span>
+              </li>
+              <li class="legend__item" data-key="fat">
+                <span class="legend__dot" style="--c:var(--fat)"></span>
+                <span class="legend__name">Жиры</span>
+                <span class="legend__val"><b id="valFat">0</b> г</span>
+                <span class="legend__bar"><i style="--c:var(--fat)"></i></span>
+              </li>
+              <li class="legend__item" data-key="carb">
+                <span class="legend__dot" style="--c:var(--carb)"></span>
+                <span class="legend__name">Углеводы</span>
+                <span class="legend__val"><b id="valCarb">0</b> г</span>
+                <span class="legend__bar"><i style="--c:var(--carb)"></i></span>
+              </li>
+            </ul>
+            <div class="nutrition__meta" id="donutMeta"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ КОНСТРУКТОР ============ -->
+    <section class="section section--builder" id="builder">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="section__eyebrow">Конструктор блюда</p>
+          <h2 class="section__title">Собери <span class="text-terracotta">свою порцию</span></h2>
+          <p class="section__lead">Отмечайте ингредиенты и двигайте слайдеры порций — КБЖУ и диаграмма пересчитываются в реальном времени.</p>
+        </header>
+
+        <div class="builder reveal">
+          <div class="builder__list" id="builderList" role="group" aria-label="Ингредиенты"></div>
+
+          <aside class="builder__summary">
+            <div class="builder__chart">
+              <canvas id="builderDonut" width="360" height="360" role="img" aria-label="Диаграмма КБЖУ собранного блюда"></canvas>
+              <div class="builder__center" aria-hidden="true">
+                <span class="builder__kcal" id="builderKcal">0</span>
+                <span class="builder__kcal-label">ккал</span>
+              </div>
+            </div>
+
+            <p class="builder__label-cap">Пищевая ценность порции</p>
+
+            <ul class="builder__macros">
+              <li><span class="dot dot--p"></span>Белки <b id="bProtein">0</b> г</li>
+              <li><span class="dot dot--f"></span>Жиры <b id="bFat">0</b> г</li>
+              <li><span class="dot dot--c"></span>Углеводы <b id="bCarb">0</b> г</li>
+            </ul>
+
+            <div class="builder__total">
+              <span>Вес порции</span>
+              <strong id="bWeight">0</strong> г
+            </div>
+
+            <button class="btn btn--primary btn--block" id="addToDay">Добавить в меню дня</button>
+            <p class="builder__note" id="builderNote" role="status" aria-live="polite"></p>
+
+            <div class="builder__day" id="dayList" role="list" aria-label="Блюда в меню дня"></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ШЕФЫ ============ -->
+    <section class="section section--chefs" id="chefs">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="section__eyebrow">История проекта</p>
+          <h2 class="section__title">Люди, которые <span class="text-saffron">создают вкус</span></h2>
+          <p class="section__lead">«Вкус» начинался с домашней кухни на три стола. Сегодня — это команда шефов, технологов и сомелье.</p>
+        </header>
+
+        <div class="grid chefs">
+          <article class="chef reveal">
+            <div class="chef__photo">
+              <img src="assets/img/chef1.jpg" alt="Портрет шеф-повара Арсена Григоряна" loading="lazy" width="128" height="128">
+            </div>
+            <h3 class="chef__name"><span>Арсен Григорян</span></h3>
+            <p class="chef__role">Шеф-повар · основатель</p>
+            <p class="chef__bio">Соединяет кавказскую щедрость и северную сдержанность. Автор более 60 рецептов проекта.</p>
+          </article>
+          <article class="chef reveal">
+            <div class="chef__photo">
+              <img src="assets/img/chef2.jpg" alt="Портрет технолога Марии Лебедевой" loading="lazy" width="128" height="128">
+            </div>
+            <h3 class="chef__name"><span>Мария Лебедева</span></h3>
+            <p class="chef__role">Технолог · нутрициолог</p>
+            <p class="chef__bio">Считает КБЖУ каждого блюда вручную. Отвечает за честные граммовки и сезонные сочетания.</p>
+          </article>
+          <article class="chef reveal">
+            <div class="chef__photo">
+              <img src="assets/img/chef3.jpg" alt="Портрет су-шефа Даниила Орлова" loading="lazy" width="128" height="128">
+            </div>
+            <h3 class="chef__name"><span>Даниил Орлов</span></h3>
+            <p class="chef__role">Су-шеф · соусы</p>
+            <p class="chef__bio">Мастер соусов и ферментации. Его хлеб на закваске давно стал визитной карточкой «Вкуса».</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ БРОНИРОВАНИЕ ============ -->
+    <section class="section section--booking" id="booking">
+      <div class="container booking__inner">
+        <div class="booking__intro reveal">
+          <p class="section__eyebrow">Бронирование</p>
+          <h2 class="section__title">Оставьте <span class="text-olive">столик за собой</span></h2>
+          <p class="section__lead">Заполните форму — мы подтвердим бронь звонком в течение 15 минут. Для компаний от 8 человек позвоните нам напрямую.</p>
+          <ul class="booking__info">
+            <li><span aria-hidden="true">⏰</span> Ежедневно с 09:00 до 23:00</li>
+            <li><span aria-hidden="true">📍</span> г. Москва, ул. Кулинарная, 14</li>
+            <li><span aria-hidden="true">📞</span> <a href="tel:+74951234567">+7 (495) 123-45-67</a></li>
+          </ul>
+        </div>
+
+        <form class="booking__form reveal" id="bookingForm" novalidate>
+          <div class="field">
+            <label for="bkName">Имя</label>
+            <input type="text" id="bkName" name="name" placeholder="Как к вам обращаться" autocomplete="name" required>
+            <small class="field__error" data-for="bkName"></small>
+          </div>
+          <div class="field">
+            <label for="bkPhone">Телефон</label>
+            <input type="tel" id="bkPhone" name="phone" placeholder="+7 (___) ___-__-__" autocomplete="tel" required>
+            <small class="field__error" data-for="bkPhone"></small>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="bkDate">Дата</label>
+              <input type="date" id="bkDate" name="date" required>
+              <small class="field__error" data-for="bkDate"></small>
+            </div>
+            <div class="field">
+              <label for="bkTime">Время</label>
+              <input type="time" id="bkTime" name="time" required>
+              <small class="field__error" data-for="bkTime"></small>
+            </div>
+          </div>
+          <div class="field">
+            <label for="bkGuests">Количество гостей</label>
+            <select id="bkGuests" name="guests" required>
+              <option value="">Выберите…</option>
+              <option value="1">1 гость</option>
+              <option value="2">2 гостя</option>
+              <option value="3">3 гостя</option>
+              <option value="4">4 гостя</option>
+              <option value="5">5 гостей</option>
+              <option value="6">6 гостей</option>
+              <option value="7">7 гостей</option>
+            </select>
+            <small class="field__error" data-for="bkGuests"></small>
+          </div>
+          <button type="submit" class="btn btn--primary btn--block">Забронировать столик</button>
+          <p class="booking__privacy">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных.</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ============ ОТЗЫВЫ ============ -->
+    <section class="section section--reviews" id="reviews">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="section__eyebrow">Отзывы гостей</p>
+          <h2 class="section__title">Нам доверяют <span class="text-saffron">самый важный вечер</span></h2>
+        </header>
+
+        <div class="reviews reveal">
+          <button class="reviews__nav reviews__nav--prev" id="revPrev" aria-label="Предыдущий отзыв">‹</button>
+          <div class="reviews__viewport">
+            <div class="reviews__track" id="revTrack"></div>
+          </div>
+          <button class="reviews__nav reviews__nav--next" id="revNext" aria-label="Следующий отзыв">›</button>
+        </div>
+        <div class="reviews__dots" id="revDots" role="group" aria-label="Навигация по отзывам"></div>
+      </div>
+    </section>
+
+    <!-- ============ ПОДПИСКА ============ -->
+    <section class="section section--subscribe" id="subscribe">
+      <div class="container subscribe reveal">
+        <div class="subscribe__text">
+          <p class="section__eyebrow">Рассылка рецептов</p>
+          <h2 class="subscribe__title">Новый рецепт — каждую пятницу</h2>
+          <p>Сезонные блюда, разборы КБЖУ и приглашения на закрытые ужины. Без спама, отписка в один клик.</p>
+        </div>
+        <form class="subscribe__form" id="subscribeForm" novalidate>
+          <label class="sr-only" for="subEmail">Email для подписки</label>
+          <input type="email" id="subEmail" name="email" placeholder="ваш@email.ru" autocomplete="email" required>
+          <button type="submit" class="btn btn--primary">Подписаться</button>
+          <small class="subscribe__msg" id="subMsg" role="status" aria-live="polite"></small>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ ФУТЕР ============ -->
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <div class="footer__col footer__brand">
+        <a href="#hero" class="logo logo--footer" aria-label="«Вкус» — наверх">
+          <span class="logo__mark" aria-hidden="true">
+            <svg viewBox="0 0 40 40" width="34" height="34">
+              <circle cx="20" cy="20" r="12" fill="none" stroke="currentColor" stroke-width="2.5"/>
+              <path d="M20 8v24M8 20h24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" opacity=".65"/>
+            </svg>
+          </span>
+          <span class="logo__text">Вкус<em>.</em></span>
+        </a>
+        <p>Гастрономический проект об авторской кухне, честном питании и радости от еды.</p>
+      </div>
+
+      <nav class="footer__col" aria-label="Меню сайта">
+        <h3>Навигация</h3>
+        <ul>
+          <li><a href="#menu">Меню</a></li>
+          <li><a href="#nutrition">Питательность</a></li>
+          <li><a href="#builder">Конструктор</a></li>
+          <li><a href="#chefs">Шефы</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__col">
+        <h3>Контакты</h3>
+        <ul>
+          <li>г. Москва, ул. Кулинарная, 14</li>
+          <li><a href="tel:+74951234567">+7 (495) 123-45-67</a></li>
+          <li><a href="mailto:hello@vkus.example">hello@vkus.example</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3>Мы рядом</h3>
+        <ul class="socials">
+          <li><a href="#" aria-label="Telegram" rel="noopener">Telegram</a></li>
+          <li><a href="#" aria-label="VK" rel="noopener">VK</a></li>
+          <li><a href="#" aria-label="YouTube" rel="noopener">YouTube</a></li>
+          <li><a href="#" aria-label="Pinterest" rel="noopener">Pinterest</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p>© <span id="year"></span> Гастрономический проект «Вкус». Все права защищены.</p>
+      <p>Сделано с любовью к еде.</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

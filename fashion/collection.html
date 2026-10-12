@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Коллекция и lookbook — АТЕЛЬЕ | Верхняя одежда, платья, аксессуары, обувь</title>
+  <meta name="description" content="Каталог модного дома «АТЕЛЬЕ»: луки осень–зима 2026, весна–лето 2026 и капсульная линия. Фильтры по сезону и категории, увеличенный просмотр каждой работы и цены.">
+  <meta name="keywords" content="каталог, lookbook, коллекция, верхняя одежда, платья, аксессуары, обувь, АТЕЛЬЕ">
+  <meta name="author" content="Модный дом «АТЕЛЬЕ»">
+  <meta name="theme-color" content="#efe9df">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="АТЕЛЬЕ">
+  <meta property="og:title" content="Коллекция и lookbook — АТЕЛЬЕ">
+  <meta property="og:description" content="Двенадцать луков новой коллекции. Фильтры по сезону и категории, увеличенный просмотр.">
+  <meta property="og:image" content="assets/img/editorial.jpg">
+  <meta property="og:url" content="collection.html">
+  <meta property="og:locale" content="ru_RU">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Коллекция и lookbook — АТЕЛЬЕ">
+  <meta name="twitter:description" content="Каталог модного дома «АТЕЛЬЕ». Фильтры и lightbox-просмотр.">
+
+  <!-- Favicon inline SVG -->
+  <link rel="icon" href="favicon.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add('js');addEventListener('load',function(){document.body.classList.add('loaded')});setTimeout(function(){document.body.classList.add('loaded')},1200);</script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo" aria-label="АТЕЛЬЕ — на главную">
+        <span class="logo__mark">АТ<b>Е</b>ЛЬЕ</span>
+        <span class="logo__sub">модный дом</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Основная навигация">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">Главная</a></li>
+          <li><a href="collection.html" class="nav__link">Коллекция</a></li>
+          <li><a href="about.html" class="nav__link">О бренде</a></li>
+          <li><a href="contact.html" class="nav__link">Контакты</a></li>
+        </ul>
+        <a href="contact.html" class="btn nav__cta">Записаться в салон</a>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ ЗАГОЛОВОК ============ -->
+    <section class="page-head">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Хлебные крошки">
+          <a href="index.html">Главная</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">Коллекция</span>
+        </nav>
+        <p class="eyebrow">Каталог · 2026</p>
+        <h1 class="page-head__title" data-split>Коллекция</h1>
+        <p class="page-head__intro">
+          Двенадцать луков дома: от несущего плеча пальто до последнего акцента — единственной
+          бордовой детали. Кликните по работе, чтобы рассмотреть крой в увеличенном просмотре.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ ФИЛЬТРЫ ============ -->
+    <section class="section--tight">
+      <h2 class="visually-hidden">Фильтры коллекции</h2>
+      <div class="container">
+        <div class="filters">
+          <div class="filter-group" role="group" aria-label="Фильтр по сезону">
+            <span class="filter-group__label">Сезон</span>
+            <button type="button" class="chip" data-filter data-group="season" data-value="all" aria-pressed="true">Все сезоны</button>
+            <button type="button" class="chip" data-filter data-group="season" data-value="aw26" aria-pressed="false">Осень / Зима 2026</button>
+            <button type="button" class="chip" data-filter data-group="season" data-value="ss26" aria-pressed="false">Весна / Лето 2026</button>
+            <button type="button" class="chip" data-filter data-group="season" data-value="capsule" aria-pressed="false">Капсула</button>
+          </div>
+          <div class="filter-group" role="group" aria-label="Фильтр по категории">
+            <span class="filter-group__label">Категория</span>
+            <button type="button" class="chip" data-filter data-group="category" data-value="all" aria-pressed="true">Все категории</button>
+            <button type="button" class="chip" data-filter data-group="category" data-value="outer" aria-pressed="false">Верхняя одежда</button>
+            <button type="button" class="chip" data-filter data-group="category" data-value="dresses" aria-pressed="false">Платья</button>
+            <button type="button" class="chip" data-filter data-group="category" data-value="accessories" aria-pressed="false">Аксессуары</button>
+            <button type="button" class="chip" data-filter data-group="category" data-value="shoes" aria-pressed="false">Обувь</button>
+          </div>
+        </div>
+        <p class="filter-status" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <!-- ============ СЕТКА LIGHTBOOK ============ -->
+    <section class="section--tight" aria-label="Луки коллекции">
+      <div class="container">
+        <div class="look-grid collection-grid">
+
+          <article class="look-card reveal" data-season="aw26" data-category="outer"
+                   data-title="Пальто «Гранит»" data-cat-label="Верхняя одежда · Осень/Зима 2026" data-price="184 000 ₽"
+                   data-full="assets/img/look-01.jpg">
+            <h3 class="visually-hidden">Пальто «Гранит»</h3>
+            <span class="badge badge--accent">Новое</span>
+            <button type="button" class="look-card__btn" aria-label="Открыть просмотр: Пальто Гранит">
+              <span class="media media--4x5">
+                <img src="assets/img/look-01.jpg" alt="Серое пальто прямого кроя" loading="lazy">
+              </span>
+              <span class="look-card__body">
+                <span>
+                  <span class="look-card__title">Пальто «Гранит»</span>
+                  <span class="look-card__cat">Верхняя одежда</span>
+                </span>
+                <span class="look-card__price">184 000 ₽</span>
+              </span>
+            </button>
+          </article>
+
+          <article class="look-card reveal" data-delay="1" data-season="aw26" data-category="outer"
+                   data-title="Пальто «Меридиан»" data-cat-label="Верхняя одежда · Осень/Зима 2026" data-price="196 000 ₽"
+                   data-full="assets/img/look-02.jpg">
+            <h3 class="visually-hidden">Пальто «Меридиан»</h3>
+            <button type="button" class="look-card__btn" aria-label="Открыть просмотр: Пальто Меридиан">
+              <span class="media media--4x5">
+                <img src="assets/img/look-02.jpg" alt="Светлое шерстяное пальто оттенка экрю" loading="lazy">
+              </span>
+              <span class="look-card__body">
+                <span>
+                  <span class="look-card__title">Пальто «Меридиан»</span>
+                  <span class="look-card__cat">Верхняя одежда</span>
+                </span>
+                <span class="look-card__price">196 000 ₽</span>
+              </span>
+            </button>
+          </article>
+
+          <article class="look-card reveal" data-delay="2" data-season="ss26" data-category="outer"
+                   data-title="Тренч «Каменный сад»" data-cat-label="Верхняя одежда · Весна/Лето 2026" data-price="148 000 ₽"
+                   data-full="assets/img/look-03.jpg">
+            <h3 class="visually-hidden">Тренч «Каменный сад»</h3>
+            <button type="button" class="look-card__btn" aria-label="Открыть просмотр: Тренч Каменный сад">
+              <span class="media media--4x5">
+                <img src="assets/img/look-03.jpg" alt="Тренч свободного силуэта из плотного хлопка" loading="lazy">
+              </span>
+              <span class="look-card__body">
+                <span>
+                  <span class="look-card__title">Тренч «Каменный сад»</span>
+                  <span class="look-card__cat">Верхняя одежда</span>
+                </span>
+                <span class="look-card__price">148 000 ₽</span>
+              </span>
+            </button>
+          </article>
+
+          <article class="look-card reveal" data-season="aw26" data-category="dresses"
+                   data-title="Платье «Слоновая кость»" data-cat-label="Платья · Осень/Зима 2026" data-price="96 500 ₽"
+                   data-full="assets/img/look-04.jpg">
+            <h3 class="visually-hidden">Платье «Слоновая кость»</h3>
+            <button type="button" class="look-card__btn" aria-label="Открыть просмотр: Платье Слоновая кость">
+              <span class="media media--4x5">
+                <img src="assets/img/look-04.jpg" alt="Вечернее платье кремового оттенка, силуэт-колонна" loading="lazy">
+              </span>
+              <span class="look-card__body">
+                <span>
+                  <span class="look-card__title">Платье «Слоновая кость»</span>
+                  <span class="look-card__cat">Платья</span>
+                </span>
+                <span class="look-card__price">96 500 ₽</span>
+              </span>
+            </button>
+          </article>
+
+          <article class="look-card reveal" data-delay="1" data-season="aw26" data-category="dresses"
+                   data-title="Платье «Полночь»" data-cat-label="Платья · Осень/Зима 2026" data-price="112 000 ₽"
+                   data-full="assets/img/look-05.jpg">
+            <h3 class="visually-hidden">Платье «Полночь»</h3>
+            <button type="button" class="look-card__btn" aria-label="Открыть просмотр: Платье Полночь">
+              <span class="media media--4x5">
+                <img src="assets/img/look-05.jpg" alt="Чёрное вечернее платье" loading="lazy">
+              </span>
+              <span class="look-card__body">
+                <span>
+                  <span class="look-card__title">Платье «Полночь»</span>
+                  <span class="look-card__cat">Платья</span>
+                </span>
+                <span class="look-card__price">112 000 ₽</span>
+              </span>
+            </button>
+          </article>
+
+          <article class="look-card reveal" data-delay="2" data-season="ss26" data-category="dresses"
+                   data-title="Платье «Акварель»" data-cat-label="Платья · Весна/Лето 2026" data-price="88 000 ₽"
+                   data-full="assets/img/look-06.jpg">
+            <h3 class="visually-hidden">Платье «Акварель»</h3>
+            <button type="button" class="look-card__btn" aria-label="Открыть просмотр: Платье Акварель">
+              <span class="media media--4x5">
+                <img src="assets/img/look-06.jpg" alt="Лёгкое летнее платье миди" loading="lazy">
+              </span>
+              <span class="look-card__body">
+                <span>
+                  <span class="look-card__title">Платье «Акварель»</span>
+                  <span class="look-card__cat">Платья</span>
+                </span>
+                <span class="look-card__price">88 000 ₽</span>
+              </span>
+            </button>
+          </article>
+
+          <article class="look-card reveal" data-season="aw26" data-category="outer"
+                   data-title="Костюм «Пропорция»" data-cat-label="Верхняя одежда · Осень/Зима 2026" data-price="142 000 ₽"
+                   data-full="assets/img/look-07.jpg">
+            <h3 class="visually-hidden">Костюм «Пропорция»</h3>
+            <button type="button" class="look-card__btn" aria-label="Открыть просмотр: Костюм Пропорция">
+              <span class="media media--4x5">
+                <img src="assets/img/look-07.jpg" alt="Шерстяной костюм-двойка с широкими брюками" loading="lazy">
+              </span>
+              <span class="look-card__body">
+                <span>
+                  <span class="look-card__title">Костюм «Пропорция»</span>
+                  <span class="look-card__cat">Верхняя одежда</span>
+                </span>
+                <span class="look-card__price">142 000 ₽</span>
+              </span>
+            </button>
+          </article>
+
+          <article class="look-card reveal" data-delay="1" data-season="capsule" data-category="outer"
+                   data-title="Жакет «Скульптура»" data-cat-label="Верхняя одежда · Капсула" data-price="118 000 ₽"
+                   data-full="assets/img/look-08.jpg">
+            <h3 class="visually-hidden">Жакет «Скульптура»</h3>
+            <span class="badge">Капсула</span>
+            <button type="button" class="look-card__btn" aria-label="Открыть просмотр: Жакет Скульптура">
+              <span class="media media--4x5">
+                <img src="assets/img/look-08.jpg" alt="Структурный жакет с чёткой линией плеча" loading="lazy">
+              </span>
+              <span class="look-card__body">
+                <span>
+                  <span class="look-card__title">Жакет «Скульптура»</span>
+                  <span class="look-card__cat">Верхняя одежда</span>
+                </span>
+                <span class="look-card__price">118 000 ₽</span>
+              </span>
+            </button>
+          </article>
+
+          <article class="look-card reveal" data-delay="2" data-season="aw26" data-category="accessories"
+                   data-title="Сумка «Бордо»" data-cat-label="Аксессуары · Осень/Зима 2026" data-price="78 000 ₽"
+                   data-full="assets/img/look-09.jpg">
+            <h3 class="visually-hidden">Сумка «Бордо»</h3>
+            <button type="button" class="look-card__btn" aria-label="Открыть просмотр: Сумка Бордо">
+              <span class="media media--4x5">
+                <img src="assets/img/look-09.jpg" alt="Кожаная сумка бордового оттенка" loading="lazy">
+              </span>
+              <span class="look-card__body">
+                <span>
+                  <span class="look-card__title">Сумка «Бордо»</span>
+                  <span class="look-card__cat">Аксессуары</span>
+                </span>
+                <span class="look-card__price">78 000 ₽</span>
+              </span>
+            </button>
+          </article>
+
+          <article class="look-card reveal" data-season="aw26" data-category="accessories"
+                   data-title="Шарф «Пепел»" data-cat-label="Аксессуары · Осень/Зима 2026" data-price="24 000 ₽"
+                   data-full="assets/img/look-10.jpg">
+            <h3 class="visually-hidden">Шарф «Пепел»</h3>
+            <button type="button" class="look-card__btn" aria-label="Открыть просмотр: Шарф Пепел">
+              <span class="media media--4x5">
+                <img src="assets/img/look-10.jpg" alt="Объёмный шарф крупной вязки серого оттенка" loading="lazy">
+              </span>
+              <span class="look-card__body">
+                <span>
+                  <span class="look-card__title">Шарф «Пепел»</span>
+                  <span class="look-card__cat">Аксессуары</span>
+                </span>
+                <span class="look-card__price">24 000 ₽</span>
+              </span>
+            </button>
+          </article>
+
+          <article class="look-card reveal" data-delay="1" data-season="aw26" data-category="shoes"
+                   data-title="Лоферы «Базальт»" data-cat-label="Обувь · Осень/Зима 2026" data-price="64 000 ₽"
+                   data-full="assets/img/look-11.jpg">
+            <h3 class="visually-hidden">Лоферы «Базальт»</h3>
+            <button type="button" class="look-card__btn" aria-label="Открыть просмотр: Лоферы Базальт">
+              <span class="media media--4x5">
+                <img src="assets/img/look-11.jpg" alt="Кожаные лоферы чёрного цвета" loading="lazy">
+              </span>
+              <span class="look-card__body">
+                <span>
+                  <span class="look-card__title">Лоферы «Базальт»</span>
+                  <span class="look-card__cat">Обувь</span>
+                </span>
+                <span class="look-card__price">64 000 ₽</span>
+              </span>
+            </button>
+          </article>
+
+          <article class="look-card reveal" data-delay="2" data-season="aw26" data-category="shoes"
+                   data-title="Ботинки «Тектоника»" data-cat-label="Обувь · Осень/Зима 2026" data-price="92 000 ₽"
+                   data-full="assets/img/look-12.jpg">
+            <h3 class="visually-hidden">Ботинки «Тектоника»</h3>
+            <button type="button" class="look-card__btn" aria-label="Открыть просмотр: Ботинки Тектоника">
+              <span class="media media--4x5">
+                <img src="assets/img/look-12.jpg" alt="Кожаные ботинки чёрного цвета на прочной подошве" loading="lazy">
+              </span>
+              <span class="look-card__body">
+                <span>
+                  <span class="look-card__title">Ботинки «Тектоника»</span>
+                  <span class="look-card__cat">Обувь</span>
+                </span>
+                <span class="look-card__price">92 000 ₽</span>
+              </span>
+            </button>
+          </article>
+
+        </div>
+
+        <p class="empty-state">По выбранным фильтрам работ пока нет. Попробуйте другой сезон или категорию.</p>
+      </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="section section--dark" aria-label="Запись в салон">
+      <div class="container cta-row">
+        <div class="reveal">
+          <p class="eyebrow">Индивидуальный крой</p>
+          <h2>Примерка в бутике</h2>
+        </div>
+        <a href="contact.html" class="btn btn--light reveal" data-delay="1">Записаться в салон</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <span class="logo__mark">АТ<b>Е</b>ЛЬЕ</span>
+        <p>Модный дом, основанный в Москве в 2015 году. Минимализм, честные материалы и крой, который живёт вне сезонов.</p>
+      </div>
+
+      <nav class="footer-col" aria-label="Разделы">
+        <h3>Разделы</h3>
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="collection.html">Коллекция</a></li>
+          <li><a href="about.html">О бренде</a></li>
+          <li><a href="contact.html">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-col" aria-label="Клиентам">
+        <h3>Клиентам</h3>
+        <ul>
+          <li><a href="contact.html">Бутики и адреса</a></li>
+          <li><a href="contact.html">Индивидуальный крой</a></li>
+          <li><a href="contact.html">Обслуживание</a></li>
+          <li><a href="contact.html">Пресса</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-col">
+        <h3>Бутики</h3>
+        <p>Москва · Санкт-Петербург<br>Дубай · Париж</p>
+        <p class="mt-2"><a href="mailto:salon@atelier-house.ru">salon@atelier-house.ru</a></p>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© <span data-year>2026</span> Модный дом «АТЕЛЬЕ». Все права защищены.</p>
+      <p>Тишина, ткань и точная линия.</p>
+    </div>
+  </footer>
+
+  <button class="to-top" type="button" aria-label="Наверх">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

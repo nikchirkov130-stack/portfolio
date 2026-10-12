@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакты — АТЕЛЬЕ | Бутики в Москве, Санкт-Петербурге, Дубае и Париже</title>
+  <meta name="description" content="Свяжитесь с модным домом «АТЕЛЬЕ»: форма обратной связи, адреса и часы работы бутиков в Москве, Санкт-Петербурге, Дубае и Париже, социальные сети дома.">
+  <meta name="keywords" content="контакты, бутики, Москва, Санкт-Петербург, Дубай, Париж, АТЕЛЬЕ, обратная связь">
+  <meta name="author" content="Модный дом «АТЕЛЬЕ»">
+  <meta name="theme-color" content="#efe9df">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="АТЕЛЬЕ">
+  <meta property="og:title" content="Контакты — АТЕЛЬЕ">
+  <meta property="og:description" content="Форма обратной связи, адреса бутиков в четырёх городах и социальные сети дома.">
+  <meta property="og:image" content="assets/img/hero.jpg">
+  <meta property="og:url" content="contact.html">
+  <meta property="og:locale" content="ru_RU">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Контакты — АТЕЛЬЕ">
+  <meta name="twitter:description" content="Бутики модного дома «АТЕЛЬЕ» и форма обратной связи.">
+
+  <!-- Favicon inline SVG -->
+  <link rel="icon" href="favicon.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add('js');addEventListener('load',function(){document.body.classList.add('loaded')});setTimeout(function(){document.body.classList.add('loaded')},1200);</script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo" aria-label="АТЕЛЬЕ — на главную">
+        <span class="logo__mark">АТ<b>Е</b>ЛЬЕ</span>
+        <span class="logo__sub">модный дом</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Основная навигация">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">Главная</a></li>
+          <li><a href="collection.html" class="nav__link">Коллекция</a></li>
+          <li><a href="about.html" class="nav__link">О бренде</a></li>
+          <li><a href="contact.html" class="nav__link">Контакты</a></li>
+        </ul>
+        <a href="#contactForm" class="btn nav__cta">Написать нам</a>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ ЗАГОЛОВОК ============ -->
+    <section class="page-head">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Хлебные крошки">
+          <a href="index.html">Главная</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">Контакты</span>
+        </nav>
+        <p class="eyebrow">Мы рядом</p>
+        <h1 class="page-head__title" data-split>Контакты</h1>
+        <p class="page-head__intro">
+          Напишите дому — по вопросам индивидуального кроя, прессы, сотрудничества или личной
+          примерки в одном из четырёх бутиков.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ ФОРМА + ИНФО ============ -->
+    <section class="section" aria-labelledby="form-title">
+      <div class="container contact-layout">
+
+        <div class="reveal">
+          <p class="eyebrow">Обратная связь</p>
+          <h2 id="form-title">Напишите нам</h2>
+
+          <div class="form-success" id="formSuccess" role="status" aria-live="polite">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+            <div>
+              <strong>Спасибо за обращение</strong>
+              <p class="form-success__text"></p>
+            </div>
+          </div>
+
+          <form id="contactForm" novalidate>
+            <div class="form-field">
+              <label for="name">Имя <span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="name" name="name" autocomplete="name" placeholder="Как к вам обращаться" required>
+              <p class="field-error" aria-live="polite"></p>
+            </div>
+
+            <div class="form-field">
+              <label for="email">Электронная почта <span class="req" aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="email" autocomplete="email" placeholder="you@example.com" required>
+              <p class="field-error" aria-live="polite"></p>
+            </div>
+
+            <div class="form-field">
+              <label for="subject">Тема обращения <span class="req" aria-hidden="true">*</span></label>
+              <select id="subject" name="subject" required>
+                <option value="">Выберите тему</option>
+                <option value="croi">Индивидуальный крой</option>
+                <option value="butik">Бутик и наличие</option>
+                <option value="press">Пресса и сотрудничество</option>
+                <option value="service">Обслуживание изделия</option>
+                <option value="other">Другое</option>
+              </select>
+              <p class="field-error" aria-live="polite"></p>
+            </div>
+
+            <div class="form-field">
+              <label for="message">Сообщение <span class="req" aria-hidden="true">*</span></label>
+              <textarea id="message" name="message" placeholder="Расскажите, чем мы можем помочь" required></textarea>
+              <p class="field-error" aria-live="polite"></p>
+            </div>
+
+            <button type="submit" class="btn btn--block">Отправить обращение</button>
+            <p class="form-note">Поля, отмеченные *, обязательны. Мы отвечаем в течение одного рабочего дня.</p>
+          </form>
+        </div>
+
+        <aside class="reveal" data-delay="1" aria-labelledby="info-title">
+          <p class="eyebrow">Реквизиты дома</p>
+          <h2 id="info-title" class="h-sm">Как с нами связаться</h2>
+
+          <div class="info-list mt-3">
+            <div class="info-list__item">
+              <span class="info-list__label">Телефон</span>
+              <span class="info-list__value"><a href="tel:+74951234567">+7 495 123-45-67</a></span>
+            </div>
+            <div class="info-list__item">
+              <span class="info-list__label">Электронная почта</span>
+              <span class="info-list__value"><a href="mailto:salon@atelier-house.ru">salon@atelier-house.ru</a></span>
+            </div>
+            <div class="info-list__item">
+              <span class="info-list__label">Головное ателье</span>
+              <span class="info-list__value">Москва, Малая Бронная, 18, стр. 1</span>
+            </div>
+            <div class="info-list__item">
+              <span class="info-list__label">Часы работы</span>
+              <span class="info-list__value">Пн–Сб 11:00–21:00, Вс — по записи</span>
+            </div>
+          </div>
+
+          <h3 class="mt-3 h-label">Социальные сети</h3>
+          <div class="socials mt-2">
+            <a href="https://instagram.com" class="social-link" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.05 1.8.25 2.2.42.6.2 1 .48 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c0 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2 0-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c0-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.7-.1 4.9-.1Zm0 3.4a6.4 6.4 0 1 0 0 12.8 6.4 6.4 0 0 0 0-12.8Zm0 10.6a4.2 4.2 0 1 1 0-8.4 4.2 4.2 0 0 1 0 8.4Zm6.6-10.9a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z"/></svg>
+              Instagram
+            </a>
+            <a href="https://t.me" class="social-link" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.9 4.3 18.9 19c-.2.9-.8 1.1-1.5.7l-4.2-3.1-2 1.9c-.2.2-.4.4-.8.4l.3-4.2L18 7.6c.3-.3-.1-.5-.5-.2l-9.3 5.9-4-1.3c-.9-.3-.9-.9.2-1.3l15.6-6c.7-.3 1.4.2 1.2 1.1Z"/></svg>
+              Telegram
+            </a>
+            <a href="https://vk.com" class="social-link" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.8 16.5c-5 0-8-3.4-8.1-9.1h2.5c.1 4.2 2 6 3.4 6.3V7.4h2.4v3.6c1.4-.1 2.8-1.7 3.3-3.6h2.4c-.4 2.2-1.9 3.8-3 4.5 1.1.5 2.8 1.9 3.5 4.6h-2.6c-.5-1.7-1.8-3-3.6-3.1v3.1h-.2Z"/></svg>
+              ВКонтакте
+            </a>
+            <a href="https://youtube.com" class="social-link" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 8.2s-.2-1.4-.8-2c-.8-.8-1.6-.8-2-.9C16.4 5 12 5 12 5s-4.4 0-7.2.3c-.4 0-1.2.1-2 .9-.6.6-.8 2-.8 2S1.8 9.8 1.8 11.5v1c0 1.6.2 3.3.2 3.3s.2 1.4.8 2c.8.8 1.8.8 2.2.9 1.6.1 6.9.2 6.9.2s4.4 0 7.2-.3c.4 0 1.2-.1 2-.9.6-.6.8-2 .8-2s.2-1.6.2-3.3v-1c0-1.6-.2-3.3-.2-3.3ZM9.9 14.6V9.4l5.2 2.6-5.2 2.6Z"/></svg>
+              YouTube
+            </a>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+
+    <!-- ============ БУТИКИ ============ -->
+    <section class="section section--alt" aria-labelledby="boutiques-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <p class="eyebrow">География дома</p>
+            <h2 id="boutiques-title">Бутики</h2>
+          </div>
+          <p>Четыре города, четыре пространства — единый почерк кроя.</p>
+        </div>
+
+        <div class="reveal">
+          <article class="boutique">
+            <h3 class="boutique__city">Москва <span class="boutique__flag">Флагман</span></h3>
+            <p class="boutique__addr">Малая Бронная, 18, стр. 1</p>
+            <p class="boutique__meta">Пн–Сб 11:00–21:00 · Вс 12:00–20:00 · +7 495 123-45-67</p>
+          </article>
+
+          <article class="boutique">
+            <h3 class="boutique__city">Санкт-Петербург <span class="boutique__flag">Салон</span></h3>
+            <p class="boutique__addr">Невский проспект, 60</p>
+            <p class="boutique__meta">Пн–Сб 11:00–21:00 · Вс 12:00–20:00 · +7 812 765-43-21</p>
+          </article>
+
+          <article class="boutique">
+            <h3 class="boutique__city">Дубай <span class="boutique__flag">Салон</span></h3>
+            <p class="boutique__addr">Dubai Design District, Building 5</p>
+            <p class="boutique__meta">Каждый день 10:00–22:00 · +971 4 555 01 20</p>
+          </article>
+
+          <article class="boutique">
+            <h3 class="boutique__city">Париж <span class="boutique__flag">Ателье</span></h3>
+            <p class="boutique__addr">Rue de Poitou, 14, 3<sup>e</sup> arrondissement</p>
+            <p class="boutique__meta">Вт–Сб 10:30–19:30 · по записи · +33 1 42 00 18 26</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ КАРТА ============ -->
+    <section class="section" aria-labelledby="map-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <p class="eyebrow">Карта присутствия</p>
+            <h2 id="map-title" class="h-sm">Четыре точки на карте</h2>
+          </div>
+        </div>
+
+        <figure class="map-figure reveal" data-delay="1">
+          <svg viewBox="0 0 800 460" role="img" aria-labelledby="map-desc" preserveAspectRatio="xMidYMid meet">
+            <title id="map-desc">Стилизованная карта расположения бутиков АТЕЛЬЕ: Москва, Санкт-Петербург, Дубай и Париж</title>
+            <defs>
+              <linearGradient id="mapLand" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#e6ddcd"/>
+                <stop offset="1" stop-color="#d6c9b4"/>
+              </linearGradient>
+            </defs>
+
+            <rect width="800" height="460" fill="#efe9df"/>
+            <!-- сетка координат -->
+            <g stroke="#d9cfbe" stroke-width="1">
+              <line x1="0" y1="92" x2="800" y2="92"/>
+              <line x1="0" y1="184" x2="800" y2="184"/>
+              <line x1="0" y1="276" x2="800" y2="276"/>
+              <line x1="0" y1="368" x2="800" y2="368"/>
+              <line x1="133" y1="0" x2="133" y2="460"/>
+              <line x1="266" y1="0" x2="266" y2="460"/>
+              <line x1="400" y1="0" x2="400" y2="460"/>
+              <line x1="533" y1="0" x2="533" y2="460"/>
+              <line x1="666" y1="0" x2="666" y2="460"/>
+            </g>
+
+            <!-- условные массивы суши: Европа и Аравия -->
+            <g fill="url(#mapLand)" stroke="#c9baa4" stroke-width="1.2">
+              <path d="M120 118 C160 74 250 62 322 74 C392 86 452 76 486 112 C512 140 496 196 440 218 C384 240 306 232 250 236 C194 240 132 224 116 182 C104 150 100 142 120 118 Z"/>
+              <path d="M546 302 C574 278 622 270 656 292 C686 312 690 348 666 372 C642 396 592 396 562 374 C536 354 524 326 546 302 Z"/>
+            </g>
+
+            <!-- соединительные линии: от Москвы к остальным бутикам -->
+            <g stroke="#7a2230" stroke-width="1" stroke-dasharray="4 5" opacity="0.5" fill="none">
+              <line x1="400" y1="150" x2="330" y2="90"/>
+              <line x1="400" y1="150" x2="150" y2="175"/>
+              <path d="M400 150 C470 250 540 330 610 330"/>
+            </g>
+
+            <!-- точки-бутики -->
+            <g class="map-pin" tabindex="0" role="img" aria-label="Москва — флагман">
+              <circle cx="400" cy="150" r="14" fill="none" stroke="#7a2230" stroke-width="1.4" opacity="0.45"/>
+              <circle cx="400" cy="150" r="6" fill="#7a2230"/>
+              <text x="418" y="146" font-family="Cormorant Garamond, serif" font-size="22" fill="#121212">Москва</text>
+              <text x="418" y="164" font-family="Manrope, sans-serif" font-size="11" fill="#7d756a" letter-spacing="1.5">ФЛАГМАН</text>
+            </g>
+
+            <g class="map-pin" tabindex="0" role="img" aria-label="Санкт-Петербург">
+              <circle cx="330" cy="90" r="11" fill="none" stroke="#121212" stroke-width="1.2" opacity="0.35"/>
+              <circle cx="330" cy="90" r="5" fill="#121212"/>
+              <text x="200" y="94" font-family="Manrope, sans-serif" font-size="14" fill="#3b3832">Санкт-Петербург</text>
+            </g>
+
+            <g class="map-pin" tabindex="0" role="img" aria-label="Париж">
+              <circle cx="150" cy="175" r="11" fill="none" stroke="#121212" stroke-width="1.2" opacity="0.35"/>
+              <circle cx="150" cy="175" r="5" fill="#121212"/>
+              <text x="60" y="179" font-family="Manrope, sans-serif" font-size="14" fill="#3b3832">Париж</text>
+            </g>
+
+            <g class="map-pin" tabindex="0" role="img" aria-label="Дубай — салон">
+              <circle cx="610" cy="330" r="13" fill="none" stroke="#7a2230" stroke-width="1.4" opacity="0.45"/>
+              <circle cx="610" cy="330" r="6" fill="#7a2230"/>
+              <text x="628" y="326" font-family="Cormorant Garamond, serif" font-size="22" fill="#121212">Дубай</text>
+              <text x="628" y="344" font-family="Manrope, sans-serif" font-size="11" fill="#7d756a" letter-spacing="1.5">САЛОН</text>
+            </g>
+          </svg>
+          <figcaption class="map-figure__cap">Схематичная карта бутиков «АТЕЛЬЕ» · 4 города, 23 страны поставок</figcaption>
+        </figure>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <span class="logo__mark">АТ<b>Е</b>ЛЬЕ</span>
+        <p>Модный дом, основанный в Москве в 2015 году. Минимализм, честные материалы и крой, который живёт вне сезонов.</p>
+      </div>
+
+      <nav class="footer-col" aria-label="Разделы">
+        <h3>Разделы</h3>
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="collection.html">Коллекция</a></li>
+          <li><a href="about.html">О бренде</a></li>
+          <li><a href="contact.html">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-col" aria-label="Клиентам">
+        <h3>Клиентам</h3>
+        <ul>
+          <li><a href="contact.html">Бутики и адреса</a></li>
+          <li><a href="contact.html">Индивидуальный крой</a></li>
+          <li><a href="contact.html">Обслуживание</a></li>
+          <li><a href="contact.html">Пресса</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-col">
+        <h3>Бутики</h3>
+        <p>Москва · Санкт-Петербург<br>Дубай · Париж</p>
+        <p class="mt-2"><a href="mailto:salon@atelier-house.ru">salon@atelier-house.ru</a></p>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© <span data-year>2026</span> Модный дом «АТЕЛЬЕ». Все права защищены.</p>
+      <p>Тишина, ткань и точная линия.</p>
+    </div>
+  </footer>
+
+  <button class="to-top" type="button" aria-label="Наверх">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

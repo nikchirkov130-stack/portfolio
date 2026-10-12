@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Модельный ряд МОТОР — электро, гибрид, ДВС</title>
+  <meta name="description" content="Полный модельный ряд МОТОР: электроседан Aero S, полноприводный Terra X, спорткар Volta GT, гибрид Hybrid One и доступный Nova EV. Фильтры и сравнение характеристик.">
+  <meta name="keywords" content="МОТОР, модельный ряд, Aero S, Terra X, Volta GT, Hybrid One, сравнение автомобилей">
+  <meta name="theme-color" content="#0a1626">
+  <link rel="canonical" href="https://motor.example.com/models.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="МОТОР">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:title" content="Модельный ряд МОТОР — от электро до ДВС">
+  <meta property="og:description" content="Выберите тип привода и класс, сравните модели и соберите свою конфигурацию.">
+  <meta property="og:image" content="https://motor.example.com/assets/img/g6.webp">
+  <meta property="og:url" content="https://motor.example.com/models.html">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20fill='%230a1626'/%3E%3Cpath%20d='M14%2046V20h8l10%2016%2010-16h8v26h-8V34l-10%2016-10-16v12z'%20fill='%2335c4e8'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">К содержанию</a>
+
+  <!-- ШАПКА -->
+  <header class="site-header">
+    <nav class="nav container" aria-label="Основная навигация">
+      <a class="brand" href="index.html" aria-label="МОТОР — на главную">
+        <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true">
+          <rect width="64" height="64" rx="6" fill="#0e2033"/>
+          <path d="M14 46V20h8l10 16 10-16h8v26h-8V34l-10 16-10-16v12z" fill="#35c4e8"/>
+        </svg>
+        <span class="brand__name">МОТОР<span class="dot">.</span></span>
+      </a>
+      <div class="nav__links" id="navLinks">
+        <a href="index.html">Главная</a>
+        <a href="models.html" aria-current="page">Модельный ряд</a>
+        <a href="configurator.html">Конфигуратор</a>
+        <a href="about.html">О компании</a>
+      </div>
+      <div class="nav__cta">
+        <a class="nav__phone" href="tel:+78002000400">8 800 200-04-00</a>
+        <a class="btn" href="configurator.html">Собрать авто</a>
+        <button class="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-hero" aria-labelledby="modelsTitle">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Хлебные крошки">
+          <a href="index.html">Главная</a> / Модельный ряд
+        </nav>
+        <span class="eyebrow">Шесть характеров</span>
+        <h1 id="modelsTitle">Модельный <span class="accent">ряд</span></h1>
+        <p class="lead" style="max-width:700px">От городского Nova EV до гоночного Volta GT. Отфильтруйте по типу привода и классу кузова, сравните любые две модели — и соберите свою конфигурацию.</p>
+      </div>
+    </section>
+
+    <section class="section section--tight" aria-labelledby="catalogTitle">
+      <div class="container">
+        <h2 class="visually-hidden" id="catalogTitle">Каталог моделей</h2>
+        <!-- ФИЛЬТРЫ -->
+        <div class="filters" role="toolbar" aria-label="Фильтры моделей" data-reveal="">
+          <div class="filter-group">
+            <span>Тип привода</span>
+            <div class="chips" role="group" aria-label="Фильтр по типу привода">
+              <button class="chip" type="button" data-field="type" data-filter="all" aria-pressed="true">Все</button>
+              <button class="chip" type="button" data-field="type" data-filter="electro" aria-pressed="false">Электро</button>
+              <button class="chip" type="button" data-field="type" data-filter="hybrid" aria-pressed="false">Гибрид</button>
+              <button class="chip" type="button" data-field="type" data-filter="ice" aria-pressed="false">ДВС</button>
+            </div>
+          </div>
+          <div class="filter-group">
+            <span>Класс кузова</span>
+            <div class="chips" role="group" aria-label="Фильтр по классу кузова">
+              <button class="chip" type="button" data-field="cls" data-filter="all" aria-pressed="true">Все</button>
+              <button class="chip" type="button" data-field="cls" data-filter="sedan" aria-pressed="false">Седан</button>
+              <button class="chip" type="button" data-field="cls" data-filter="crossover" aria-pressed="false">Кроссовер</button>
+              <button class="chip" type="button" data-field="cls" data-filter="sport" aria-pressed="false">Спорт</button>
+            </div>
+          </div>
+          <div class="filters__count" id="filterCount" aria-live="polite"></div>
+        </div>
+
+        <!-- СЕТКА КАРТОЧЕК -->
+        <div class="grid grid--3" id="modelsGrid"></div>
+
+        <div class="empty-state" id="modelsEmpty" hidden>
+          <p>Под такие фильтры моделей пока нет.</p>
+          <button class="btn btn--ghost" type="button" data-reset-filters>Сбросить фильтры</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- СРАВНЕНИЕ -->
+    <section class="section section--tight compare" id="compare" aria-labelledby="compareTitle">
+      <div class="container">
+        <div class="section-head" data-reveal="">
+          <span class="eyebrow">Сравнение</span>
+          <h2 id="compareTitle">Модель против <span class="accent">модели</span></h2>
+          <p class="lead">Выберите две модели — таблица мгновенно покажет, чем они отличаются, а зелёная подсветка отметит лучший показатель.</p>
+        </div>
+        <div class="compare__selects" data-reveal="">
+          <div class="field">
+            <label for="cmpA">Первая модель</label>
+            <select id="cmpA"></select>
+          </div>
+          <div class="field">
+            <label for="cmpB">Вторая модель</label>
+            <select id="cmpB"></select>
+          </div>
+        </div>
+        <div class="table-wrap" data-reveal="">
+          <table class="compare__table">
+            <thead>
+              <tr>
+                <th scope="col">Параметр</th>
+                <th scope="col">Модель А</th>
+                <th scope="col">Модель B</th>
+              </tr>
+            </thead>
+            <tbody id="cmpBody"></tbody>
+          </table>
+        </div>
+        <div class="btn-row" style="margin-top:24px" data-reveal="">
+          <a class="btn" href="configurator.html">Перейти в конфигуратор</a>
+          <a class="btn btn--ghost" href="index.html#testdrive">Записаться на тест-драйв</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ФУТЕР -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a class="brand" href="index.html">
+            <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true">
+              <rect width="64" height="64" rx="6" fill="#0e2033"/>
+              <path d="M14 46V20h8l10 16 10-16h8v26h-8V34l-10 16-10-16v12z" fill="#35c4e8"/>
+            </svg>
+            <span class="brand__name">МОТОР<span class="dot">.</span></span>
+          </a>
+          <p>Российский бренд премиальных электромобилей. Инженерия, дизайн и производство — в Москве с 2014 года.</p>
+        </div>
+        <div>
+          <h3>Навигация</h3>
+          <ul class="footer__links">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="models.html">Модельный ряд</a></li>
+            <li><a href="configurator.html">Конфигуратор</a></li>
+            <li><a href="about.html">О компании</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Клиентам</h3>
+          <ul class="footer__links">
+            <li><a href="about.html#dealers">Дилеры и сервис</a></li>
+            <li><a href="about.html#guarantee">Гарантия</a></li>
+            <li><a href="index.html#testdrive">Тест-драйв</a></li>
+            <li><a href="about.html#timeline">История бренда</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Контакты</h3>
+          <ul class="footer__links">
+            <li><a href="tel:+78002000400">8 800 200-04-00 (бесплатно)</a></li>
+            <li><a href="mailto:hello@motor.auto">hello@motor.auto</a></li>
+            <li><a href="about.html#dealers">Москва, Ленинградский пр-т, 39</a></li>
+          </ul>
+          <div class="socials">
+            <a href="https://vk.com" target="_blank" rel="noopener" aria-label="МОТОР ВКонтакте">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 17s.3-.03.5-.3c.2-.4.6-1.6 1-2.7.2-.8.5.5 1 1 .6.7 1.4.9 1.4.9h2s1.7-.2.9-1.7c-.2-.3-1.2-2.5-5-5.3-2-1.5-3-1.6-3.4-1.4-.6.3-.8 1.3-.3 2-.5-.3-1-1-2.4-2.6-.7-.8-1.2-1-1.5-1-.5-.1-1-.4-1-.6-.3-1-.7-3.2-.7-3.3s-.1-.4-.5-.4H4.5c-.4 0-.6.6-.5 1 .6 3 4.7 10 6.8 10 1-.3.6-.4 1 .8z"/></svg>
+            </a>
+            <a href="https://t.me" target="_blank" rel="noopener" aria-label="МОТОР в Telegram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 4 3 11l6 2 2 7 3-5 5 3 2-14z"/></svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="МОТОР на YouTube">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23 8s-.2-1.6-.9-2.3c-.8-.9-1.7-.9-2.1-1C16.8 4.4 12 4.4 12 4.4s-4.8 0-8 .3c-.4.1-1.3.1-2.1 1C1.2 6.4 1 8 1 8S.8 9.8.8 11.6v1.7c0 1.8.2 3.6.2 3.6s.2 1.6.9 2.3c.8.9 1.9.9 2.4 1 1.7.2 7 .3 7 .3s4.8 0 8-.3c.4-.1 1.3-.1 2.1-1 .7-.7.9-2.3.9-2.3s.2-1.8.2-3.6v-1.7C23.2 9.8 23 8 23 8zM9.7 14.8V8.4l5.6 3.2-5.6 3.2z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2014–2026 МОТОР. Все права защищены.</span>
+        <span><a href="#">Политика конфиденциальности</a> · <a href="#">Условия покупки</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

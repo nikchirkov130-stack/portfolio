@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+  <title>Импульс — фитнес-платформа: тренировки, прогресс и питание</title>
+  <meta name="description" content="Импульс — фитнес-платформа с программами тренировок, трекингом прогресса, калькулятором ИМТ и суточной нормы калорий. Стань сильнее себя вчерашнего." >
+  <meta name="author" content="Импульс" >
+  <meta name="theme-color" content="#0b0b0b" >
+  <meta name="keywords" content="фитнес, тренировки, прогресс, питание, ИМТ, калории, программы, спорт" >
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" >
+  <meta property="og:locale" content="ru_RU" >
+  <meta property="og:title" content="Импульс — фитнес-платформа" >
+  <meta property="og:description" content="Программы тренировок, визуализация прогресса, калькулятор ИМТ и калорий. Стань сильнее себя вчерашнего." >
+  <meta property="og:site_name" content="Импульс" >
+  <meta property="og:image" content="assets/img/hero.jpg" >
+  <meta name="twitter:card" content="summary_large_image" >
+  <meta name="twitter:title" content="Импульс — фитнес-платформа" >
+  <meta name="twitter:description" content="Программы тренировок, визуализация прогресса, калькулятор ИМТ и калорий." >
+
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" >
+  <link rel="apple-touch-icon" href="./favicon.svg" >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" >
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet" >
+
+  <link rel="stylesheet" href="./css/style.css" >
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a class="logo" href="#hero" aria-label="Импульс — на главную">
+        <span class="logo__mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="30" height="30" role="img" aria-label="Логотип Импульс">
+            <rect width="32" height="32" rx="8" fill="#0a0e14" />
+            <path d="M4 16h5l3-9 4 18 3-9h9" fill="none" stroke="#c6ff00" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </span>
+        <span class="logo__text">Импульс</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Основная навигация">
+        <ul class="nav__list">
+          <li><a class="nav__link is-active" href="#hero">Главная</a></li>
+          <li><a class="nav__link" href="#programs">Программы</a></li>
+          <li><a class="nav__link" href="#dashboard">Прогресс</a></li>
+          <li><a class="nav__link" href="#calculator">Калькулятор</a></li>
+          <li><a class="nav__link" href="#pricing">Тарифы</a></li>
+          <li><a class="nav__link" href="#trainers">Тренеры</a></li>
+          <li><a class="nav__link" href="#faq">Вопросы</a></li>
+        </ul>
+      </nav>
+
+      <a class="btn btn--primary header__cta" href="#pricing">Начать бесплатно</a>
+
+      <button class="burger" id="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero section" id="hero">
+      <div class="hero__grid-bg" aria-hidden="true"></div>
+      <div class="particles" id="particles" aria-hidden="true"></div>
+
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="eyebrow reveal">Фитнес-платформа нового поколения</p>
+          <p class="telemetry reveal"><span class="telemetry__dot" aria-hidden="true"></span>Система активна<span class="cursor" aria-hidden="true"></span></p>
+          <h1 class="hero__title reveal">Стань сильнее<br >себя <span class="accent-text">вчерашнего</span></h1>
+          <p class="hero__subtitle reveal">
+            Персональные программы тренировок, визуализация прогресса и умный контроль питания.
+            Всё, чтобы двигаться вперёд каждый день.
+          </p>
+          <div class="hero__actions reveal">
+            <a class="btn btn--primary btn--lg" href="#pricing">Начать бесплатно</a>
+            <a class="btn btn--ghost btn--lg" href="#programs">Смотреть программы</a>
+          </div>
+
+          <ul class="hero__stats" aria-label="Показатели платформы">
+            <li class="hero__stat">
+              <span class="counter accent-text" data-target="18500" data-suffix="+">0</span>
+              <span class="hero__stat-label">активных атлетов</span>
+            </li>
+            <li class="hero__stat">
+              <span class="counter" data-target="320" data-suffix="+">0</span>
+              <span class="hero__stat-label">программ тренировок</span>
+            </li>
+            <li class="hero__stat">
+              <span class="counter" data-target="96" data-suffix="%">0</span>
+              <span class="hero__stat-label">доходят до цели</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="hero__visual reveal">
+          <div class="hero__photo">
+            <img class="hero__photo-img" src="assets/img/hero.jpg" alt="Атлет выполняет упражнение со штангой в тренажёрном зале" width="840" height="1180" >
+            <svg class="hero__pulse" viewBox="0 0 300 420" role="img" aria-label="Пульсирующая кардиограмма поверх фото атлета">
+              <polyline class="pulse-line" points="20,240 60,240 74,240 84,210 96,268 108,224 122,240 160,240 174,240 184,214 196,264 208,228 222,240 280,240" fill="none" stroke="#2979ff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+              <circle class="pulse-dot" cx="20" cy="240" r="5" fill="#2979ff" />
+            </svg>
+          </div>
+
+          <div class="hero__badge hero__badge--1" aria-hidden="true">
+            <span class="hero__badge-icon">🔥</span>
+            <span><strong>420</strong> ккал сожжено</span>
+          </div>
+          <div class="hero__badge hero__badge--2" aria-hidden="true">
+            <span class="hero__badge-icon">❤️</span>
+            <span><strong>72</strong> уд/мин</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span class="marquee__item">Импульс</span>
+        <span class="marquee__item">18 500+ атлетов</span>
+        <span class="marquee__item">320+ программ</span>
+        <span class="marquee__item">Hard mode</span>
+        <span class="marquee__item">96% доходят до цели</span>
+        <span class="marquee__item">Стань сильнее себя вчерашнего</span>
+        <span class="marquee__item">Импульс</span>
+        <span class="marquee__item">18 500+ атлетов</span>
+        <span class="marquee__item">320+ программ</span>
+        <span class="marquee__item">Hard mode</span>
+        <span class="marquee__item">96% доходят до цели</span>
+        <span class="marquee__item">Стань сильнее себя вчерашнего</span>
+      </div>
+    </div>
+
+    <!-- ПРОГРАММЫ -->
+    <section class="section" id="programs">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Программы</p>
+          <h2 class="section__title">Выбери своё направление</h2>
+          <p class="section__lead">Шесть направлений для любого уровня подготовки — от первого шага до спортивного результата.</p>
+        </header>
+
+        <div class="cards grid-3">
+          <article class="card reveal">
+            <span class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28"><path d="M6 7v10M18 7v10M3 9v6M21 9v6M6 12h12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+            <h3 class="card__title">Сила</h3>
+            <p class="card__text">Базовые и изолирующие упражнения для роста мышечной массы и силы.</p>
+            <ul class="card__meta">
+              <li>Уровень: <strong>Средний</strong></li>
+              <li>Длительность: <strong>45 мин</strong></li>
+            </ul>
+            <span class="card__tag">12 программ</span>
+          </article>
+
+          <article class="card reveal">
+            <span class="card__icon card__icon--blue" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28"><path d="M3 12h4l3-7 4 14 3-7h4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <h3 class="card__title">Кардио</h3>
+            <p class="card__text">Интервальные и продолжительные нагрузки для выносливости сердца.</p>
+            <ul class="card__meta">
+              <li>Уровень: <strong>Любой</strong></li>
+              <li>Длительность: <strong>30 мин</strong></li>
+            </ul>
+            <span class="card__tag">9 программ</span>
+          </article>
+
+          <article class="card reveal">
+            <span class="card__icon card__icon--green" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28"><circle cx="12" cy="5" r="2.4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7.5V14m0 0-4 7m4-7 4 7M5 11h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+            <h3 class="card__title">Йога</h3>
+            <p class="card__text">Практики для гибкости, осанки и ментального равновесия.</p>
+            <ul class="card__meta">
+              <li>Уровень: <strong>Новичок</strong></li>
+              <li>Длительность: <strong>40 мин</strong></li>
+            </ul>
+            <span class="card__tag">15 программ</span>
+          </article>
+
+          <article class="card reveal">
+            <span class="card__icon card__icon--red" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28"><path d="M13 2 4 14h7l-1 8 9-12h-7z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+            </span>
+            <h3 class="card__title">HIIT</h3>
+            <p class="card__text">Высокоиитенсивные интервалы для максимального жиросжигания.</p>
+            <ul class="card__meta">
+              <li>Уровень: <strong>Продвинутый</strong></li>
+              <li>Длительность: <strong>20 мин</strong></li>
+            </ul>
+            <span class="card__tag">8 программ</span>
+          </article>
+
+          <article class="card reveal">
+            <span class="card__icon card__icon--purple" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28"><circle cx="12" cy="5" r="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M6 20v-4a6 6 0 0 1 12 0v4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 14h3M18 14h3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+            <h3 class="card__title">Функционал</h3>
+            <p class="card__text">Комплексные движения на все группы мышц для реальной силы.</p>
+            <ul class="card__meta">
+              <li>Уровень: <strong>Средний</strong></li>
+              <li>Длительность: <strong>50 мин</strong></li>
+            </ul>
+            <span class="card__tag">10 программ</span>
+          </article>
+
+          <article class="card reveal">
+            <span class="card__icon card__icon--teal" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28"><path d="M4 20c6 0 4-8 8-8s2 4 8 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="6" cy="8" r="2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="8" r="2" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            </span>
+            <h3 class="card__title">Растяжка</h3>
+            <p class="card__text">Мобильность и восстановление для долгой и здоровой жизни.</p>
+            <ul class="card__meta">
+              <li>Уровень: <strong>Любой</strong></li>
+              <li>Длительность: <strong>15 мин</strong></li>
+            </ul>
+            <span class="card__tag">7 программ</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ДАШБОРД ПРОГРЕССА -->
+    <section class="section section--alt" id="dashboard">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Дашборд прогресса</p>
+          <h2 class="section__title">Твой прогресс — наглядно</h2>
+          <p class="section__lead">Ежедневно отслеживай ключевые показатели: калории, шаги, воду и качество сна.</p>
+        </header>
+
+        <div class="rings" role="group" aria-label="Кольца прогресса за сегодня">
+          <div class="ring-card reveal" data-progress="78">
+            <svg class="ring" viewBox="0 0 160 160" role="img" aria-label="Калории: 78 процентов от цели">
+              <circle class="ring__track" cx="80" cy="80" r="66" />
+              <circle class="ring__ticks" cx="80" cy="80" r="66" />
+              <circle class="ring__value" cx="80" cy="80" r="66" stroke="#c8ff2e" />
+            </svg>
+            <div class="ring__center">
+              <span class="ring__num counter" data-target="1850">0</span>
+              <span class="ring__unit">ккал</span>
+              <span class="ring__pct counter" data-target="78" data-suffix="%">0</span>
+            </div>
+            <p class="ring-card__label">Калории</p>
+          </div>
+
+          <div class="ring-card reveal" data-progress="86">
+            <svg class="ring" viewBox="0 0 160 160" role="img" aria-label="Шаги: 86 процентов от цели">
+              <circle class="ring__track" cx="80" cy="80" r="66" />
+              <circle class="ring__ticks" cx="80" cy="80" r="66" />
+              <circle class="ring__value" cx="80" cy="80" r="66" stroke="#ff6a00" />
+            </svg>
+            <div class="ring__center">
+              <span class="ring__num counter" data-target="8600">0</span>
+              <span class="ring__unit">шагов</span>
+              <span class="ring__pct counter" data-target="86" data-suffix="%">0</span>
+            </div>
+            <p class="ring-card__label">Шаги</p>
+          </div>
+
+          <div class="ring-card reveal" data-progress="64">
+            <svg class="ring" viewBox="0 0 160 160" role="img" aria-label="Вода: 64 процента от цели">
+              <circle class="ring__track" cx="80" cy="80" r="66" />
+              <circle class="ring__ticks" cx="80" cy="80" r="66" />
+              <circle class="ring__value" cx="80" cy="80" r="66" stroke="#7f8b99" />
+            </svg>
+            <div class="ring__center">
+              <span class="ring__num counter" data-target="1600">0</span>
+              <span class="ring__unit">мл</span>
+              <span class="ring__pct counter" data-target="64" data-suffix="%">0</span>
+            </div>
+            <p class="ring-card__label">Вода</p>
+          </div>
+
+          <div class="ring-card reveal" data-progress="92">
+            <svg class="ring" viewBox="0 0 160 160" role="img" aria-label="Сон: 92 процента от цели">
+              <circle class="ring__track" cx="80" cy="80" r="66" />
+              <circle class="ring__ticks" cx="80" cy="80" r="66" />
+              <circle class="ring__value" cx="80" cy="80" r="66" stroke="#f2f2f2" />
+            </svg>
+            <div class="ring__center">
+              <span class="ring__num counter" data-target="7.4" data-decimals="1">0</span>
+              <span class="ring__unit">часов</span>
+              <span class="ring__pct counter" data-target="92" data-suffix="%">0</span>
+            </div>
+            <p class="ring-card__label">Сон</p>
+          </div>
+        </div>
+
+        <div class="chart-panel reveal">
+          <div class="chart-panel__head">
+            <div>
+              <h3 class="chart-panel__title">Активность за 7 дней</h3>
+              <p class="chart-panel__sub">Минуты тренировок и сожжённые калории</p>
+            </div>
+            <div class="chart-legend" aria-hidden="true">
+              <span class="chart-legend__item"><i class="dot dot--lime"></i>Минуты</span>
+              <span class="chart-legend__item"><i class="dot dot--blue"></i>Калории</span>
+            </div>
+          </div>
+          <div class="chart-wrap">
+            <canvas id="activityChart" width="900" height="340" role="img" aria-label="График активности за 7 дней: столбцы минут тренировок и линия калорий"></canvas>
+          </div>
+        </div>
+
+        <div class="stats-row">
+          <div class="stat-box reveal">
+            <span class="stat-box__value"><span class="counter" data-target="42" data-suffix="">0</span></span>
+            <span class="stat-box__label">тренировки за месяц</span>
+            <span class="segbar" aria-hidden="true"><span class="segbar__fill" style="--fill:72%"></span></span>
+          </div>
+          <div class="stat-box reveal">
+            <span class="stat-box__value"><span class="counter" data-target="14" data-suffix="">0</span><small> ч</small></span>
+            <span class="stat-box__label">общее время активности</span>
+            <span class="segbar" aria-hidden="true"><span class="segbar__fill" style="--fill:58%"></span></span>
+          </div>
+          <div class="stat-box reveal">
+            <span class="stat-box__value"><span class="counter" data-target="6" data-suffix="">0</span></span>
+            <span class="stat-box__label">недель подряд без пропусков</span>
+            <span class="segbar" aria-hidden="true"><span class="segbar__fill" style="--fill:86%"></span></span>
+          </div>
+          <div class="stat-box reveal">
+            <span class="stat-box__value"><span class="counter" data-target="12800" data-suffix="">0</span></span>
+            <span class="stat-box__label">сожжённых калорий</span>
+            <span class="segbar" aria-hidden="true"><span class="segbar__fill" style="--fill:64%"></span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- КАЛЬКУЛЯТОР -->
+    <section class="section" id="calculator">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Калькулятор</p>
+          <h2 class="section__title">ИМТ и суточная норма калорий</h2>
+          <p class="section__lead">Введи свои данные — рассчитаем индекс массы тела по методике ВОЗ и норму калорий по формуле Mifflin–St Jeor.</p>
+        </header>
+
+        <div class="calc">
+          <form class="calc__form reveal" id="calcForm" novalidate>
+            <fieldset class="field">
+              <legend class="field__label">Пол</legend>
+              <div class="segmented" role="radiogroup" aria-label="Пол">
+                <label class="segmented__item">
+                  <input type="radio" name="sex" value="male" checked >
+                  <span>Мужчина</span>
+                </label>
+                <label class="segmented__item">
+                  <input type="radio" name="sex" value="female" >
+                  <span>Женщина</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <div class="field">
+              <label class="field__label" for="age">Возраст, лет</label>
+              <input class="input" type="number" id="age" name="age" min="14" max="100" value="28" inputmode="numeric" >
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="height">Рост, см</label>
+              <input class="input" type="number" id="height" name="height" min="120" max="230" value="178" inputmode="numeric" >
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="weight">Вес, кг</label>
+              <input class="input" type="number" id="weight" name="weight" min="35" max="220" value="74" inputmode="numeric" >
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="activity">Уровень активности</label>
+              <select class="input" id="activity" name="activity">
+                <option value="1.2">Минимальная — сидячий образ жизни</option>
+                <option value="1.375">Небольшая — 1–3 тренировки в неделю</option>
+                <option value="1.55" selected>Средняя — 3–5 тренировок в неделю</option>
+                <option value="1.725">Высокая — 6–7 тренировок в неделю</option>
+                <option value="1.9">Очень высокая — спортсмен, 2 раза в день</option>
+              </select>
+            </div>
+
+            <button class="btn btn--primary btn--lg calc__submit" type="submit">Рассчитать</button>
+          </form>
+
+          <div class="calc__result reveal" aria-live="polite">
+            <div class="result-top">
+              <div class="result-bmi">
+                <span class="result-bmi__label">Индекс массы тела</span>
+                <span class="result-bmi__value" id="bmiValue">—</span>
+                <span class="result-bmi__category" id="bmiCategory">Введите данные</span>
+              </div>
+              <div class="result-gauge" aria-hidden="true">
+                <div class="gauge">
+                  <div class="gauge__bar">
+                    <span class="gauge__seg gauge__seg--under"></span>
+                    <span class="gauge__seg gauge__seg--normal"></span>
+                    <span class="gauge__seg gauge__seg--over"></span>
+                    <span class="gauge__seg gauge__seg--obese"></span>
+                  </div>
+                  <span class="gauge__marker" id="bmiMarker" style="left:0%"></span>
+                  <div class="gauge__scale">
+                    <span>16</span><span>18,5</span><span>25</span><span>30</span><span>40</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="result-cards">
+              <div class="result-card">
+                <span class="result-card__label">Базовый метаболизм (BMR)</span>
+                <span class="result-card__value" id="bmrValue">—</span>
+                <span class="result-card__hint">калорий в покое</span>
+              </div>
+              <div class="result-card result-card--accent">
+                <span class="result-card__label">Суточная норма (TDEE)</span>
+                <span class="result-card__value" id="tdeeValue">—</span>
+                <span class="result-card__hint">калорий в день</span>
+              </div>
+            </div>
+
+            <p class="result-advice" id="advice">Заполните форму и нажмите «Рассчитать», чтобы увидеть результат.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ТАРИФЫ -->
+    <section class="section section--alt" id="pricing">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Тарифы</p>
+          <h2 class="section__title">Планы под твои цели</h2>
+          <p class="section__lead">Начни бесплатно и переходи на новый уровень, когда будешь готов.</p>
+        </header>
+
+        <div class="pricing grid-3">
+          <article class="price-card reveal">
+            <h3 class="price-card__name">Старт</h3>
+            <p class="price-card__price"><span>0</span> ₽<small>/мес</small></p>
+            <p class="price-card__desc">Для тех, кто только начинает путь.</p>
+            <ul class="price-card__list">
+              <li>Доступ к 3 базовым программам</li>
+              <li>Трекинг веса и шагов</li>
+              <li>Базовый калькулятор калорий</li>
+              <li>Сообщество Импульс</li>
+            </ul>
+            <a class="btn btn--ghost btn--block" href="#calculator">Начать</a>
+          </article>
+
+          <article class="price-card price-card--popular reveal">
+            <span class="price-card__badge">Популярный</span>
+            <h3 class="price-card__name">Про</h3>
+            <p class="price-card__price"><span>990</span> ₽<small>/мес</small></p>
+            <p class="price-card__desc">Оптимальный выбор для регулярных занятий.</p>
+            <ul class="price-card__list">
+              <li>Все 60+ программ тренировок</li>
+              <li>Персональный план питания</li>
+              <li>Расширенная аналитика прогресса</li>
+              <li>Синхронизация носимых устройств</li>
+              <li>Чат с тренером</li>
+            </ul>
+            <a class="btn btn--primary btn--block" href="#calculator">Попробовать 7 дней</a>
+          </article>
+
+          <article class="price-card reveal">
+            <h3 class="price-card__name">Элит</h3>
+            <p class="price-card__price"><span>2490</span> ₽<small>/мес</small></p>
+            <p class="price-card__desc">Максимум поддержки и результата.</p>
+            <ul class="price-card__list">
+              <li>Всё из тарифа Про</li>
+              <li>Персональный тренер 1-на-1</li>
+              <li>Нутрициолог и план питания</li>
+              <li>Видеоразбор техники</li>
+              <li>Приоритетная поддержка 24/7</li>
+            </ul>
+            <a class="btn btn--ghost btn--block" href="#calculator">Связаться</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ТРЕНЕРЫ -->
+    <section class="section" id="trainers">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Команда</p>
+          <h2 class="section__title">Тренеры, которые ведут к цели</h2>
+          <p class="section__lead">Сертифицированные специалисты с опытом работы со спортсменами любого уровня.</p>
+        </header>
+
+        <div class="trainers grid-4">
+          <article class="trainer reveal">
+            <div class="trainer__photo">
+              <img src="assets/img/t1.jpg" alt="Тренер Артём Соколов" width="600" height="600" loading="lazy" >
+            </div>
+            <h3 class="trainer__name">Артём Соколов</h3>
+            <p class="trainer__spec">Силовая подготовка</p>
+            <p class="trainer__exp">Опыт 9 лет · Мастер спорта</p>
+          </article>
+
+          <article class="trainer reveal">
+            <div class="trainer__photo">
+              <img src="assets/img/t2.jpg" alt="Тренер Мария Величко" width="600" height="600" loading="lazy" >
+            </div>
+            <h3 class="trainer__name">Мария Величко</h3>
+            <p class="trainer__spec">Йога и мобильность</p>
+            <p class="trainer__exp">Опыт 7 лет · Сертификат RYT-500</p>
+          </article>
+
+          <article class="trainer reveal">
+            <div class="trainer__photo">
+              <img src="assets/img/t3.jpg" alt="Тренер Дмитрий Орлов" width="600" height="600" loading="lazy" >
+            </div>
+            <h3 class="trainer__name">Дмитрий Орлов</h3>
+            <p class="trainer__spec">HIIT и функционал</p>
+            <p class="trainer__exp">Опыт 11 лет · Эксперт по жиросжиганию</p>
+          </article>
+
+          <article class="trainer reveal">
+            <div class="trainer__photo">
+              <img src="assets/img/t4.jpg" alt="Тренер Анна Кузнецова" width="600" height="600" loading="lazy" >
+            </div>
+            <h3 class="trainer__name">Анна Кузнецова</h3>
+            <p class="trainer__spec">Кардио и питание</p>
+            <p class="trainer__exp">Опыт 6 лет · Диетолог-нутрициолог</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ДОСТИЖЕНИЯ + ОТЗЫВЫ -->
+    <section class="section section--alt" id="reviews">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Достижения и отзывы</p>
+          <h2 class="section__title">Результаты, которыми гордятся</h2>
+        </header>
+
+        <div class="achievements">
+          <div class="achievement reveal">
+            <span class="achievement__icon" aria-hidden="true">🏆</span>
+            <span class="achievement__value"><span class="counter" data-target="18500" data-suffix="+">0</span></span>
+            <span class="achievement__label">активных атлетов</span>
+          </div>
+          <div class="achievement reveal">
+            <span class="achievement__icon" aria-hidden="true">⭐</span>
+            <span class="achievement__value"><span class="counter" data-target="4.9" data-decimals="1">0</span></span>
+            <span class="achievement__label">средняя оценка</span>
+          </div>
+          <div class="achievement reveal">
+            <span class="achievement__icon" aria-hidden="true">📈</span>
+            <span class="achievement__value"><span class="counter" data-target="2.4" data-decimals="1" data-suffix=" млн">0</span></span>
+            <span class="achievement__label">тренировок проведено</span>
+          </div>
+          <div class="achievement reveal">
+            <span class="achievement__icon" aria-hidden="true">💬</span>
+            <span class="achievement__value"><span class="counter" data-target="12600" data-suffix="+">0</span></span>
+            <span class="achievement__label">отзывов</span>
+          </div>
+        </div>
+
+        <div class="reviews grid-3">
+          <figure class="review reveal">
+            <blockquote class="review__text">За три месяца на «Импульсе» впервые за жизнь дошёл до −12 кг. Прогресс виден на графике каждый день — это реально мотивирует.</blockquote>
+            <figcaption class="review__author">
+              <img src="assets/img/r1.jpg" alt="Игорь Л." width="200" height="200" loading="lazy" >
+              <span><strong>Игорь Л.</strong><small>тариф Про</small></span>
+            </figcaption>
+          </figure>
+
+          <figure class="review reveal">
+            <blockquote class="review__text">Удобная визуализация прогресса и понятные программы. Йога-курс помог наконец-то сесть на шпагат.</blockquote>
+            <figcaption class="review__author">
+              <img src="assets/img/r2.jpg" alt="Елена В." width="200" height="200" loading="lazy" >
+              <span><strong>Елена В.</strong><small>тариф Про</small></span>
+            </figcaption>
+          </figure>
+
+          <figure class="review reveal">
+            <blockquote class="review__text">Калькулятор калорий и персональный тренер в тарифе Элит — это то, что дало результат. Рекомендую всем.</blockquote>
+            <figcaption class="review__author">
+              <img src="assets/img/r3.jpg" alt="Сергей П." width="200" height="200" loading="lazy" >
+              <span><strong>Сергей П.</strong><small>тариф Элит</small></span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="container container--narrow">
+        <header class="section__head reveal">
+          <p class="eyebrow">Вопросы и ответы</p>
+          <h2 class="section__title">Частые вопросы</h2>
+        </header>
+
+        <div class="faq" id="faqList">
+          <div class="faq__item reveal">
+            <button class="faq__question" type="button" aria-expanded="false" aria-controls="faq-a1" id="faq-q1">
+              <span>Нужна ли подготовка, чтобы начать?</span>
+              <span class="faq__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq__answer" id="faq-a1" role="region" aria-labelledby="faq-q1" hidden>
+              <p>Нет. У нас есть программы для новичков с нуля. Достаточно пройти короткий входной тест — система подберёт нагрузку под ваш уровень.</p>
+            </div>
+          </div>
+
+          <div class="faq__item reveal">
+            <button class="faq__question" type="button" aria-expanded="false" aria-controls="faq-a2" id="faq-q2">
+              <span>Как считается норма калорий?</span>
+              <span class="faq__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq__answer" id="faq-a2" role="region" aria-labelledby="faq-q2" hidden>
+              <p>Мы используем формулу Mifflin–St Jeor для базового метаболизма (BMR) и умножаем на коэффициент активности, получая суточную норму (TDEE).</p>
+            </div>
+          </div>
+
+          <div class="faq__item reveal">
+            <button class="faq__question" type="button" aria-expanded="false" aria-controls="faq-a3" id="faq-q3">
+              <span>Можно ли тренироваться дома?</span>
+              <span class="faq__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq__answer" id="faq-a3" role="region" aria-labelledby="faq-q3" hidden>
+              <p>Да. Большинство программ адаптированы под домашние условия и не требуют специального оборудования — только собственный вес или гантели.</p>
+            </div>
+          </div>
+
+          <div class="faq__item reveal">
+            <button class="faq__question" type="button" aria-expanded="false" aria-controls="faq-a4" id="faq-q4">
+              <span>Есть ли бесплатный период?</span>
+              <span class="faq__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq__answer" id="faq-a4" role="region" aria-labelledby="faq-q4" hidden>
+              <p>Да, тариф Про доступен бесплатно 7 дней без привязки карты. Вы сможете оценить все возможности и отменить подписку в любой момент.</p>
+            </div>
+          </div>
+
+          <div class="faq__item reveal">
+            <button class="faq__question" type="button" aria-expanded="false" aria-controls="faq-a5" id="faq-q5">
+              <span>На каких устройствах работает платформа?</span>
+              <span class="faq__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq__answer" id="faq-a5" role="region" aria-labelledby="faq-q5" hidden>
+              <p>Платформа работает в любом современном браузере на компьютере, планшете и смартфоне. Прогресс синхронизируется между всеми устройствами.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section section" id="cta">
+      <div class="container">
+        <div class="cta reveal">
+          <div class="cta__content">
+            <h2 class="cta__title">Готов изменить себя?</h2>
+            <p class="cta__text">Присоединяйся к 18 500 атлетам, которые тренируются с «Импульсом» каждый день. Первая неделя — бесплатно.</p>
+          </div>
+          <div class="cta__actions">
+            <a class="btn btn--primary btn--lg" href="#pricing">Начать бесплатно</a>
+            <a class="btn btn--ghost btn--lg" href="#programs">Выбрать программу</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="marquee marquee--dark marquee--reverse" aria-hidden="true">
+      <div class="marquee__track">
+        <span class="marquee__item">Тренируйся системно</span>
+        <span class="marquee__item">Контролируй питание</span>
+        <span class="marquee__item">Отслеживай прогресс</span>
+        <span class="marquee__item">Без пропусков</span>
+        <span class="marquee__item">Тренируйся системно</span>
+        <span class="marquee__item">Контролируй питание</span>
+        <span class="marquee__item">Отслеживай прогресс</span>
+        <span class="marquee__item">Без пропусков</span>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a class="logo" href="#hero" aria-label="Импульс — на главную">
+          <span class="logo__mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" width="28" height="28">
+              <rect width="32" height="32" rx="8" fill="#0a0e14" />
+              <path d="M4 16h5l3-9 4 18 3-9h9" fill="none" stroke="#c6ff00" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </span>
+          <span class="logo__text">Импульс</span>
+        </a>
+        <p class="footer__desc">Фитнес-платформа с тренировками, прогрессом и питанием в одном приложении.</p>
+      </div>
+
+      <nav class="footer__col" aria-label="Навигация в подвале">
+        <h3 class="footer__heading">Разделы</h3>
+        <ul class="footer__list">
+          <li><a href="#programs">Программы</a></li>
+          <li><a href="#dashboard">Прогресс</a></li>
+          <li><a href="#calculator">Калькулятор</a></li>
+          <li><a href="#trainers">Тренеры</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer__col" aria-label="Компания">
+        <h3 class="footer__heading">Компания</h3>
+        <ul class="footer__list">
+          <li><a href="#pricing">Тарифы</a></li>
+          <li><a href="#reviews">Отзывы</a></li>
+          <li><a href="#faq">Вопросы</a></li>
+          <li><a href="#cta">Начать</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__col">
+        <h3 class="footer__heading">Контакты</h3>
+        <ul class="footer__list">
+          <li><a href="mailto:hello@impulse.fit">hello@impulse.fit</a></li>
+          <li><a href="tel:+78001234567">8 800 123-45-67</a></li>
+          <li>Москва, ул. Спортивная, 7</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p>© 2026 «Импульс». Все права защищены.</p>
+      <p>Сделано с заботой о твоём здоровье.</p>
+    </div>
+  </footer>
+
+  <script src="./js/main.js"></script>
+</body>
+</html>

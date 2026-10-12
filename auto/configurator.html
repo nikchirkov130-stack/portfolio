@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конфигуратор МОТОР — соберите свой электромобиль</title>
+  <meta name="description" content="Онлайн-конфигуратор МОТОР: выберите модель, цвет, диски, интерьер и пакеты опций. Живой пересчёт цены и анимированные графики мощности, разгона, запаса хода и расхода.">
+  <meta name="keywords" content="конфигуратор автомобиля, МОТОР, цена авто, опции, электромобиль">
+  <meta name="theme-color" content="#0a1626">
+  <link rel="canonical" href="https://motor.example.com/configurator.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="МОТОР">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:title" content="Конфигуратор МОТОР — цена в реальном времени">
+  <meta property="og:description" content="Соберите автомобиль мечты: цвет, диски, интерьер и пакеты опций с живым пересчётом цены.">
+  <meta property="og:image" content="https://motor.example.com/assets/img/g2.webp">
+  <meta property="og:url" content="https://motor.example.com/configurator.html">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20fill='%230a1626'/%3E%3Cpath%20d='M14%2046V20h8l10%2016%2010-16h8v26h-8V34l-10%2016-10-16v12z'%20fill='%2335c4e8'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">К содержанию</a>
+
+  <!-- ШАПКА -->
+  <header class="site-header">
+    <nav class="nav container" aria-label="Основная навигация">
+      <a class="brand" href="index.html" aria-label="МОТОР — на главную">
+        <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true">
+          <rect width="64" height="64" rx="6" fill="#0e2033"/>
+          <path d="M14 46V20h8l10 16 10-16h8v26h-8V34l-10 16-10-16v12z" fill="#35c4e8"/>
+        </svg>
+        <span class="brand__name">МОТОР<span class="dot">.</span></span>
+      </a>
+      <div class="nav__links" id="navLinks">
+        <a href="index.html">Главная</a>
+        <a href="models.html">Модельный ряд</a>
+        <a href="configurator.html" aria-current="page">Конфигуратор</a>
+        <a href="about.html">О компании</a>
+      </div>
+      <div class="nav__cta">
+        <a class="nav__phone" href="tel:+78002000400">8 800 200-04-00</a>
+        <a class="btn" href="configurator.html">Собрать авто</a>
+        <button class="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="configurator">
+    <section class="page-hero" aria-labelledby="configTitle">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Хлебные крошки">
+          <a href="index.html">Главная</a> / <a href="models.html">Модельный ряд</a> / Конфигуратор
+        </nav>
+        <span class="eyebrow">Цена считается в реальном времени</span>
+        <h1 id="configTitle">Конфигуратор <span class="accent">МОТОР</span></h1>
+        <p class="lead" style="max-width:680px">Модель, цвет, диски, интерьер и пакеты опций — следите за итоговой ценой, стоимостью рассрочки и графиками характеристик справа.</p>
+      </div>
+    </section>
+
+    <section class="section section--tight" aria-label="Конструктор автомобиля">
+      <div class="container config">
+
+        <!-- ЛЕВАЯ КОЛОНКА -->
+        <div class="config__controls">
+          <!-- Модель -->
+          <div class="option-group">
+            <span class="option-group__title" id="stepModel">Шаг 1 · Модель</span>
+            <div class="tabs" role="tablist" aria-label="Выбор модели" id="configTabs"></div>
+          </div>
+
+          <!-- Превью -->
+          <div class="config__preview">
+            <span class="config__badge" id="configBadge">МОТОР</span>
+            <div class="scanline"></div>
+            <div id="carPreview" aria-live="polite"></div>
+          </div>
+
+          <!-- Цвет -->
+          <div class="option-group">
+            <span class="option-group__title">Шаг 2 · Цвет кузова</span>
+            <div class="swatches" role="radiogroup" aria-label="Цвет кузова" id="colorSwatches"></div>
+            <p class="swatch-name" id="colorName">—</p>
+          </div>
+
+          <!-- Диски -->
+          <div class="option-group">
+            <span class="option-group__title">Шаг 3 · Диски</span>
+            <div class="wheel-picker" id="wheelPicker" role="group" aria-label="Размер дисков"></div>
+          </div>
+
+          <!-- Интерьер -->
+          <div class="option-group">
+            <span class="option-group__title">Шаг 4 · Интерьер</span>
+            <div class="interior-picker" id="interiorPicker" role="group" aria-label="Материал интерьера"></div>
+          </div>
+
+          <!-- Пакеты -->
+          <div class="option-group">
+            <span class="option-group__title">Шаг 5 · Пакеты опций</span>
+            <div class="options-list" id="optionPackages" role="group" aria-label="Пакеты опций"></div>
+          </div>
+
+          <!-- Кнопки управления -->
+          <div class="btn-row">
+            <button class="btn" type="button" data-scroll="#savings">Как оплатить выгоднее</button>
+            <button class="btn btn--ghost" type="button" id="copyConfig">Скопировать ссылку</button>
+            <button class="btn btn--ghost" type="button" id="resetConfig">Сбросить</button>
+          </div>
+        </div>
+
+        <!-- ПРАВАЯ КОЛОНКА: СВОДКА -->
+        <aside class="summary" aria-label="Сводка конфигурации">
+          <div class="summary__model">
+            <div>
+              <span>Ваш автомобиль:</span>
+              <h2 id="summaryModelName">МОТОР Aero S</h2>
+            </div>
+            <span id="summaryClass">Электро · Седан</span>
+          </div>
+
+          <div class="summary__rows" id="summaryRows"></div>
+
+          <div class="summary__total">
+            <span>Итого</span>
+            <b id="summaryTotal" aria-live="polite">—</b>
+          </div>
+          <p class="summary__monthly" id="summaryMonthly">—</p>
+
+          <div class="chips-selected" id="chipsSelected" role="group" aria-label="Выбранные опции"></div>
+
+          <button class="btn btn--red btn--block btn--lg" type="button" id="preorderBtn">Оформить предзаказ</button>
+          <p class="form-note">Предзаказ не требует оплаты. Менеджер подтвердит комплектацию и рассчитает доставку.</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ГРАФИКИ ХАРАКТЕРИСТИК -->
+    <section class="section section--tight" id="savings" aria-labelledby="chartsTitle">
+      <div class="container">
+        <div class="section-head" data-reveal="">
+          <span class="eyebrow">Характеристики</span>
+          <h2 id="chartsTitle">Графики вашей <span class="accent">комплектации</span></h2>
+          <p class="lead">Пакеты опций влияют не только на цену — графики ниже анимированно перестраиваются: мощность, разгон 0–100, запас хода и расход.</p>
+        </div>
+
+        <div class="charts" data-reveal="">
+          <h3>Ключевые показатели</h3>
+          <div class="bars">
+            <div class="bar" id="barPower">
+              <div class="bar__head"><span>Мощность</span><b>—</b></div>
+              <div class="bar__track"><div class="bar__fill" style="width:0"></div></div>
+            </div>
+            <div class="bar" id="barAccel">
+              <div class="bar__head"><span>Разгон 0–100 км/ч</span><b>—</b></div>
+              <div class="bar__track"><div class="bar__fill bar__fill--red" style="width:0"></div></div>
+            </div>
+            <div class="bar" id="barRange">
+              <div class="bar__head"><span>Запас хода</span><b>—</b></div>
+              <div class="bar__track"><div class="bar__fill" style="width:0"></div></div>
+            </div>
+            <div class="bar" id="barCons">
+              <div class="bar__head"><span>Расход</span><b>—</b></div>
+              <div class="bar__track"><div class="bar__fill bar__fill--red" style="width:0"></div></div>
+            </div>
+          </div>
+
+          <div class="radar-wrap">
+            <canvas id="radarChart" width="320" height="320" aria-label="Радарная диаграмма характеристик" role="img"></canvas>
+            <div class="radar-legend" id="radarLegend"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ФИНАНСОВАЯ ИНФО -->
+    <section class="section section--tight" aria-labelledby="financeTitle">
+      <div class="container">
+        <div class="section-head center" data-reveal="">
+          <span class="eyebrow">Финансы</span>
+          <h2 id="financeTitle">Купить просто, как <span class="accent">подключить свет</span></h2>
+        </div>
+        <div class="grid grid--3">
+          <div class="feature" data-reveal data-delay="1">
+            <div class="feature__ico" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 10h4M16 14h2M2 10h0"/></svg>
+            </div>
+            <h3>Рассрочка 0%</h3>
+            <p>На 60 месяцев без первого взноса. Первый платёж — только после подписания договора.</p>
+          </div>
+          <div class="feature" data-reveal data-delay="2">
+            <div class="feature__ico" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2v20M17 6H9.5a2.5 2.5 0 0 0 0 5h5a2.5 2.5 0 0 1 0 5H6"/></svg>
+            </div>
+            <h3>Трейд-ин выгоднее</h3>
+            <p>Доплата до 300 000 ₽ за ваш старый автомобиль и бесплатный обмен за 1 день.</p>
+          </div>
+          <div class="feature" data-reveal data-delay="3">
+            <div class="feature__ico" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 18V6m4 12V9m4 9v-5m4 5v-3m4 3V8"/><path d="M2 22h20"/></svg>
+            </div>
+            <h3>Зарядка в подарок</h3>
+            <p>Домашняя станция 22 кВт к любому электромобилю при заказе до конца месяца.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- МОДАЛЬНОЕ ОКНО ПРЕДЗАКАЗА -->
+  <div class="modal" id="preorderModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal__box">
+      <button class="modal__close" type="button" data-close aria-label="Закрыть окно">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+      <div class="modal__icon" aria-hidden="true">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 11 20 15l-2-1-1 6h-3l-3-8-3-1"/><circle cx="8" cy="16" r="3"/><circle cx="16" cy="14" r="3"/><path d="M9 16 21 9M21 9l-4-5-3 2"/></svg>
+      </div>
+      <h2 id="modalTitle" style="font-size:1.5rem;text-transform:none">Ваш «МОТОР» почти готов</h2>
+      <p class="lead" style="font-size:0.95rem">Оставьте контакты — сохраним комплектацию и забронируем автомобиль на 72 часа бесплатно.</p>
+      <div class="modal__summary" id="modalSummary"></div>
+      <form data-form novalidate>
+        <div class="field">
+          <label for="po-name">Имя</label>
+          <input id="po-name" name="name" type="text" placeholder="Андрей" required>
+        </div>
+        <div class="field">
+          <label for="po-phone">Телефон</label>
+          <input id="po-phone" name="phone" type="tel" placeholder="+7 (___) ___-__-__" required>
+        </div>
+        <div class="field">
+          <label for="po-city">Город получения</label>
+          <select id="po-city">
+            <option>Москва</option>
+            <option>Санкт-Петербург</option>
+            <option>Екатеринбург</option>
+            <option>Казань</option>
+            <option>Новосибирск</option>
+            <option>Сочи</option>
+          </select>
+        </div>
+        <button class="btn btn--red btn--block btn--lg" type="submit">Подтвердить предзаказ</button>
+      </form>
+      <p class="form-note">Никаких предоплат. Оплата — при получении в дилерском центре.</p>
+    </div>
+  </div>
+
+  <!-- ФУТЕР -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a class="brand" href="index.html">
+            <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true">
+              <rect width="64" height="64" rx="6" fill="#0e2033"/>
+              <path d="M14 46V20h8l10 16 10-16h8v26h-8V34l-10 16-10-16v12z" fill="#35c4e8"/>
+            </svg>
+            <span class="brand__name">МОТОР<span class="dot">.</span></span>
+          </a>
+          <p>Российский бренд премиальных электромобилей. Инженерия, дизайн и производство — в Москве с 2014 года.</p>
+        </div>
+        <div>
+          <h3>Навигация</h3>
+          <ul class="footer__links">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="models.html">Модельный ряд</a></li>
+            <li><a href="configurator.html">Конфигуратор</a></li>
+            <li><a href="about.html">О компании</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Клиентам</h3>
+          <ul class="footer__links">
+            <li><a href="about.html#dealers">Дилеры и сервис</a></li>
+            <li><a href="about.html#guarantee">Гарантия</a></li>
+            <li><a href="index.html#testdrive">Тест-драйв</a></li>
+            <li><a href="about.html#timeline">История бренда</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Контакты</h3>
+          <ul class="footer__links">
+            <li><a href="tel:+78002000400">8 800 200-04-00 (бесплатно)</a></li>
+            <li><a href="mailto:hello@motor.auto">hello@motor.auto</a></li>
+            <li><a href="about.html#dealers">Москва, Ленинградский пр-т, 39</a></li>
+          </ul>
+          <div class="socials">
+            <a href="https://vk.com" target="_blank" rel="noopener" aria-label="МОТОР ВКонтакте">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 17s.3-.03.5-.3c.2-.4.6-1.6 1-2.7.2-.8.5.5 1 1 .6.7 1.4.9 1.4.9h2s1.7-.2.9-1.7c-.2-.3-1.2-2.5-5-5.3-2-1.5-3-1.6-3.4-1.4-.6.3-.8 1.3-.3 2-.5-.3-1-1-2.4-2.6-.7-.8-1.2-1-1.5-1-.5-.1-1-.4-1-.6-.3-1-.7-3.2-.7-3.3s-.1-.4-.5-.4H4.5c-.4 0-.6.6-.5 1 .6 3 4.7 10 6.8 10 1-.3.6-.4 1 .8z"/></svg>
+            </a>
+            <a href="https://t.me" target="_blank" rel="noopener" aria-label="МОТОР в Telegram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 4 3 11l6 2 2 7 3-5 5 3 2-14z"/></svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="МОТОР на YouTube">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23 8s-.2-1.6-.9-2.3c-.8-.9-1.7-.9-2.1-1C16.8 4.4 12 4.4 12 4.4s-4.8 0-8 .3c-.4.1-1.3.1-2.1 1C1.2 6.4 1 8 1 8S.8 9.8.8 11.6v1.7c0 1.8.2 3.6.2 3.6s.2 1.6.9 2.3c.8.9 1.9.9 2.4 1 1.7.2 7 .3 7 .3s4.8 0 8-.3c.4-.1 1.3-.1 2.1-1 .7-.7.9-2.3.9-2.3s.2-1.8.2-3.6v-1.7C23.2 9.8 23 8 23 8zM9.7 14.8V8.4l5.6 3.2-5.6 3.2z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2014–2026 МОТОР. Все права защищены.</span>
+        <span><a href="#">Политика конфиденциальности</a> · <a href="#">Условия покупки</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="168" height="168" viewBox="0 0 168 168">
+  <defs>
+    <pattern id="bp-minor" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M28 0H0V28" fill="none" stroke="#35c4e8" stroke-opacity="0.055" stroke-width="1"/>
+    </pattern>
+    <pattern id="bp-major" width="168" height="168" patternUnits="userSpaceOnUse">
+      <rect width="168" height="168" fill="url(#bp-minor)"/>
+      <path d="M168 0H0V168" fill="none" stroke="#35c4e8" stroke-opacity="0.14" stroke-width="1"/>
+      <path d="M168 84H0M84 168V0" fill="none" stroke="#35c4e8" stroke-opacity="0.07" stroke-width="1"/>
+      <path d="M84 81v6M81 84h6" stroke="#35c4e8" stroke-opacity="0.35" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="168" height="168" fill="url(#bp-major)"/>
+</svg>
