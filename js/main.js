@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  var EMAIL = 'hello@example.com';
+  var EMAIL = 'nik-chirkov-03@mail.ru';
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   var header = document.getElementById('header');
